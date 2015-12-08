@@ -5,7 +5,12 @@ package Chapter8;
  */
 public class Test {
     public static void main(String[] args) {
-        int a = (int)(Math.random()*5);
-        System.out.println(a);
+        try{
+            System.exit(1);
+            int i = 10/0;
+        }
+        finally {
+            System.out.println("finally处理");
+        }
     }
 }
