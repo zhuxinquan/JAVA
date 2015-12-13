@@ -1,0 +1,1 @@
+ByteArrayOutputStream 类向内存中的字节数组写数据.
