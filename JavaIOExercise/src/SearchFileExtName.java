@@ -29,7 +29,9 @@ public class SearchFileExtName {
     }
 
     public static void main(String[] args) {
-        File file = new File("../");
+        File file = new File("/home/zhuxinquan/IdeaProjects");
+//        判断当前目录是否可读
+//        System.out.println("file can read?" + file.canRead());
         String extName = ".java";
         findFile(file, extName);
     }
