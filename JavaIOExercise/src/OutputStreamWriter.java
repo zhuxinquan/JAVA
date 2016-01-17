@@ -1,12 +1,43 @@
-import java.io.FileOutputStream;
-import java.io.IOException;
-import java.io.OutputStream;
-import java.io.Writer;
+import java.io.*;
 
 /**
  * Created by zhuxinquan on 16-1-17.
  */
 public class OutputStreamWriter {
+
+    /**
+     * 使用转换流，将字节流转换字符流
+     */
+    public static void reader(){
+        try {
+            InputStream in = new FileInputStream("./test.txt");
+            Reader reader = new InputStreamReader(in);
+            char[]  cs = new char[50];
+            int len = -1;
+            StringBuilder sb = new StringBuilder();
+            try {
+                while((len = reader.read(cs)) != -1){
+                    sb.append(cs, 0, len);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                reader.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            try {
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            System.out.println(sb);
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
+
     /**
      * 通过字节转换输出流将字符串写入文件
      */
@@ -20,6 +51,6 @@ public class OutputStreamWriter {
     }
 
     public static void main(String[] args) throws IOException {
-        writer();
+        reader();
     }
 }
