@@ -63,6 +63,6 @@ public class DomParseDemo {
             }
             teachers.add(t);
         }
-        System.out.println(teachers);
+        System.out.println(teachers); 
     }
 }
