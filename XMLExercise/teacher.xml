@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<person>
+    <teacher id="1">
+        <name>小白</name>
+        <desc>小白人</desc>
+    </teacher>
+    <teacher id="2">
+        <name>小黑</name>
+        <desc>小黑人</desc>
+    </teacher>
+</person>
