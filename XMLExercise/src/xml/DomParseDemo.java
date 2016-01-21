@@ -46,23 +46,24 @@ public class DomParseDemo {
             Node teachernode =  nodelist.item(i);
             //getAttributes取得当前结点下的所有属性,getNameItem根据属性名称获取当前属性
             String id = teachernode.getAttributes().getNamedItem("id").getNodeValue();
-//            System.out.println(id);
+            System.out.println(id);
             t.setId(Integer.parseInt(id));
             //获取当前节点下的所有子节点列表
             NodeList childNodeList = teachernode.getChildNodes();
             for (int j = 0; j < childNodeList.getLength(); j++) {
                 //获取teacher节点下的其中一个子节点
                 Node childNode = childNodeList.item(j);
+                String tagName = childNode.getNodeName();
                 //获取teacher节点下的desc值
-                if("name".equals(childNode.getNodeName())){
+                if("name".equals(tagName)){
                     //获取teacher节点下的name节点的值
-                    t.setName(childNode.getFirstChild().getNodeValue());
+                    t.setName(tagName);
                 }else {
-                    t.setDesc(childNode.getFirstChild().getNodeValue());
+                    t.setDesc(tagName);
                 }
             }
             teachers.add(t);
         }
-        System.out.println(teachers); 
+        System.out.println(teachers);
     }
 }
