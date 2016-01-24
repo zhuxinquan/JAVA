@@ -60,9 +60,9 @@ public class DomParseDemo {
                 }else if("desc".equals(tagName)){
                     //获取teacher节点下的desc值
                     t.setDesc(childNode.getFirstChild().getNodeValue());
-                }/*else{
-                    System.out.println(childNode.getFirstChild().getNodeValue());
-                }*/
+                }else{
+                    System.out.println(tagName);
+                }
             }
             teachers.add(t);
         }
