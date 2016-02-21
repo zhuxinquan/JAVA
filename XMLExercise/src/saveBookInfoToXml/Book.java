@@ -7,12 +7,12 @@ public class Book {
     private String name;    //书名
     private String author;  //作者
     private String publishing;  //出版社
-    private String contentInfo;        //内容简介
-    private String authorInfo;          //作者简介
     private String publishDate;         //出版日期
-    private String translator;          //译者
     private String pages;               //页数
     private String price;               //定价
+    private String contentInfo;        //内容简介
+    private String authorInfo;          //作者简介
+
 
     @Override
     public String toString() {
@@ -23,7 +23,6 @@ public class Book {
                 ", contentInfo='" + contentInfo + '\'' +
                 ", authorInfo='" + authorInfo + '\'' +
                 ", publishDate='" + publishDate + '\'' +
-                ", translator='" + translator + '\'' +
                 ", pages='" + pages + '\'' +
                 ", price='" + price + '\'' +
                 '}';
@@ -75,14 +74,6 @@ public class Book {
 
     public void setPublishDate(String publishDate) {
         this.publishDate = publishDate;
-    }
-
-    public String getTranslator() {
-        return translator;
-    }
-
-    public void setTranslator(String translator) {
-        this.translator = translator;
     }
 
     public String getPages() {

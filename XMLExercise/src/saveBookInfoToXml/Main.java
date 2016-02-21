@@ -8,10 +8,10 @@ import java.util.List;
  * Created by zhuxinquan on 16-2-17.
  */
 public class Main {
-    public static List<String> pageUrl = new LinkedList<>();           //书籍详情页链接
-    public List<Book> booksInfo = new LinkedList<>();    //书籍介绍集合
+    private static List<String> pageUrl = new LinkedList<>();           //书籍详情页链接
+    private List<Book> booksInfo = new LinkedList<>();    //书籍介绍集合
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         GetPageUrl getUrl = new GetPageUrl();
         System.out.println(pageUrl);
 //        System.out.println(pageUrl.size());
