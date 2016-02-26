@@ -15,13 +15,15 @@ public class JdbaQueryDemo {
         try {
             Class.forName(Driver);
             Connection conn = DriverManager.getConnection(URL, USERNAME, PASSWD);
-            String sql = "select id, name, age, description from person";
-            Statement state = conn.createStatement();
-            //返回sql操作影响的行数
-            ResultSet rs = state.executeQuery(sql);
+            String sql = "select id, name, age, description from person where id = ?";
+            PreparedStatement state = conn.prepareStatement(sql);
+            state.setInt(1, 9);
+            //返回查询的结果集的引用
+            ResultSet rs = state.executeQuery();
             while (rs.next()){
                 int id = rs.getInt(1);
                 System.out.println(id);
+                System.out.println(rs.getString(2) + rs.getInt(3) + rs.getString(4));
             }
             rs.close();
             state.close();
