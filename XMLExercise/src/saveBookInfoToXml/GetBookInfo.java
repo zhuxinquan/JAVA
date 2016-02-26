@@ -163,6 +163,11 @@ public class GetBookInfo extends Thread{
             if(m1.find()){
                 price = m1.replaceAll("");
             }
+            reg_price1 = Pattern.compile("元");
+            m1 = reg_price1.matcher(price);
+            if(m1.find()){
+                price = m1.replaceAll("");
+            }
             m1 = reg_htm.matcher(price);
             if(m1.find()){
                 price = m1.replaceAll("");
@@ -277,6 +282,7 @@ public class GetBookInfo extends Thread{
             System.out.println("执行中");
             main.addBookInfo(b);
         }
+        SaveDatabase sd = new SaveDatabase(b);
         WriteXmlFile w = new WriteXmlFile(b);
     }
 }
