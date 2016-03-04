@@ -4,8 +4,6 @@ import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import java.io.IOException;
-import java.util.Date;
-import java.util.concurrent.ThreadFactory;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -26,7 +24,8 @@ public class GetBookInfo extends Thread{
         Book b = new Book();
         Document doc = null;
         try {
-            doc = (Document) Jsoup.connect(url).timeout(10000).get();
+            doc = (Document) Jsoup.connect(url).timeout(10000)
+                    .get();
         } catch (IOException e) {
             e.printStackTrace();
         }
