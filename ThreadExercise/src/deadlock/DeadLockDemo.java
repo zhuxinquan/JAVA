@@ -1,7 +1,5 @@
 package deadlock;
 
-
-
 /**
  * 以顾客和服务生对峙举例死锁
  * Created by zhuxinquan on 16-1-26.
