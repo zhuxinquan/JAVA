@@ -3,6 +3,7 @@ package list;
 import java.util.*;
 
 /**
+ * LinkedList使用Comparator接口进行排序
  * Created by zhuxinquan on 16-4-6.
  */
 public class GradeSortLinkedListSort {
