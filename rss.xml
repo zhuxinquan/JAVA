@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="url"?>
+<rss version="2.0">
+	<channel>
+		<title>订阅频道名称</title>
+		<link>响应该频道的网站的URL</link>
+		<description>关于该频道的描述</description>
+		<!-- 注释部分为可选的频道标签 -->
+		<!-- <language>使用的语言</language> -->
+		<!-- <copyright>版权声明</copyright> -->
+		<!-- <managingEditor>内容负责人的Email</managingEditor> -->
+		<!-- <webMaster>技术人员的Email</webMaster> -->
+		<!-- <pubDate>内容的发布时间</pubDate> -->
+		<!-- <lastBuildDate>最后更新时间</lastBuildDate> -->
+		<!-- <category>指定该频道所属的一个或多个分类。遵循与item级category元素相同的规则。</category> -->
+		<!-- <generator>生成该频道的程序名称</generator> -->
+		<!-- <docs>指向rss格式文档的url地址</docs> -->
+		<!-- <cloud>允许所有进程注册一个cloud用于获得频道的更新通知，并为rss种子实现一个轻量级的发布订阅协议</cloud> -->
+		<!-- <ttl>ttl是Time to live的缩写。它指示cache的有效保存时间</ttl> -->
+		<!-- <image> -->
+			<!-- 与频道一起显示的图片地址 -->
+			<url>GIF、JPEG或PNG图像文件的URL地址</url>
+			<title>用于描述上面的图像，等同于HTML语言中的<img>的alt属性</title>
+			<link>是要连接的站点的url，当显示频道时，图像的连接指向该站点</link>
+			<!-- <title>和<link>应该与频道的<title>和<link>有相同的值 -->
+			<!-- <width>图像宽度</width> -->
+			<!-- <height>图像高度</height> -->
+		<!-- </image> 
+		<!-- <rating>该频道的统计图片地址</rating> -->
+		<!-- <textInput> -->
+			<!-- 指定一个textbox与该频道一起显示 -->
+			<title>提交按钮的标签</title>
+			<description>该文本输入区的描述</description>
+			<name>文本输入区的内容</name>
+			<link>处理文本输入的CGI脚本的URL</link>
+		<!-- </textInput> -->
+		<!-- <skipHours>告诉使用者哪些时段是可以忽略的</skipHours> -->
+		<!-- <skipDays>告诉使者哪些天是可以忽略的</skipDays> -->
+		<!-- <item> -->
+			<!-- 一个rss订阅频道可以包含许多项目（item）节点 -->
+			<!-- 项目的所有节点都是可选的，但是至少要包含至少一个标题(title)和描述(description) -->
+			<title>item的标题</title>
+			<!-- <link>item的URL</link> -->
+			<description>item概要</description>
+			<!-- <author>作者的email地址</author> -->
+			<!-- <category> -->
+				<!-- item可以包含在一个或多个分类中 -->
+				<!-- 同一个item可以包含多个category标签 -->
+			<!-- </category> -->
+			<!-- <comments>与item相关的评论的地址</comments> -->
+			<!-- <enclosure> -->
+				<!-- 附加的媒体对象 -->
+				<!-- <enclosure>是<item>的可选节点。它有三个必要的属性。url属性指示enclosure的位置，length指出它的字节大小，type属性指出它的标准MIME类型。url必须为一个http url -->
+				<!-- <enclosure url=http://www.scripting.com/mp3s/weatherReportSuite.mp3 length="12216320" type="audio/mpeg" /> -->
+			<!-- </enclosure> -->
+			<!-- <guid>可以唯一确定item的字符串， guid是globally unique identifier的缩写。它是一个可以唯一识别item的字符串</guid> -->
+			<!-- <pubDate>item发布的时间</pubDate> -->
+			<!-- <source> -->
+				<!-- rss频道来源 -->
+				<!-- 它的值是item来自的rss频道的名称，从item的title衍生而来。它有一个必须包含的属性url,该属性链接到XML序列化源 -->
+				<!-- <source url="http://static.userland.com/tomalak/links2.xml">Tomalak's Realm</source> -->
+			<!-- </source> -->
+		<!-- </item> -->
+	</channel>
+</rss>
