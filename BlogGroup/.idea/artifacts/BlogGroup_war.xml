@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="BlogGroup:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="com.blog.zxq.war">
+      <element id="artifact" artifact-name="BlogGroup:war exploded" />
+    </root>
+  </artifact>
+</component>
