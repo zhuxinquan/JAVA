@@ -6,7 +6,6 @@ package Decorator;
  */
 public class Test {
     public static void main(String[] args) {
-
         //生产豆浆
         Drink soya = new SoyaBeanMilk();
         //加鸡蛋
