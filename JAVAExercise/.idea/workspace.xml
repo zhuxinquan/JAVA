@@ -40,7 +40,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-              <folding />
+              <folding>
+                <element signature="e#683#684#0" expanded="false" />
+                <element signature="e#707#708#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,12 +58,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ArraysDemo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ArraysDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Arrays/ArraysDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.91201353">
-              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CodeBlockDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/codeBlockDemo/CodeBlockDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.40778342">
+              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+              <folding>
+                <element signature="e#242#243#0" expanded="true" />
+                <element signature="e#284#285#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -134,6 +150,7 @@
         <option value="$PROJECT_DIR$/src/StringDemo/StringConstant.java" />
         <option value="$PROJECT_DIR$/src/singletonPattern/SingletonDemo.java" />
         <option value="$PROJECT_DIR$/src/Arrays/ArraysDemo.java" />
+        <option value="$PROJECT_DIR$/src/codeBlockDemo/CodeBlockDemo.java" />
       </list>
     </option>
   </component>
@@ -255,7 +272,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="Arrays" />
+              <option name="myItemId" value="codeBlockDemo" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -281,30 +298,10 @@
       <recent name="$PROJECT_DIR$/src/程序国际化" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ArraysDemo">
+  <component name="RunManager" selected="Application.CodeBlockDemo">
     <configuration default="false" name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JAVAExercise" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="StringConstant" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="StringDemo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="StringDemo.StringConstant" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -365,6 +362,26 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="Arrays.ArraysDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JAVAExercise" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="CodeBlockDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="codeBlockDemo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="codeBlockDemo.CodeBlockDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -816,18 +833,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.CalculateTest.add" />
       <item index="1" class="java.lang.String" itemvalue="Application.Test (2)" />
-      <item index="2" class="java.lang.String" itemvalue="Application.StringConstant" />
-      <item index="3" class="java.lang.String" itemvalue="Application.StringObject" />
-      <item index="4" class="java.lang.String" itemvalue="Application.SingletonDemo" />
-      <item index="5" class="java.lang.String" itemvalue="Application.ArraysDemo" />
+      <item index="2" class="java.lang.String" itemvalue="Application.StringObject" />
+      <item index="3" class="java.lang.String" itemvalue="Application.SingletonDemo" />
+      <item index="4" class="java.lang.String" itemvalue="Application.ArraysDemo" />
+      <item index="5" class="java.lang.String" itemvalue="Application.CodeBlockDemo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.ArraysDemo" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SingletonDemo" />
-        <item index="2" class="java.lang.String" itemvalue="Application.StringObject" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Test (2)" />
-        <item index="4" class="java.lang.String" itemvalue="Application.StringConstant" />
+        <item index="0" class="java.lang.String" itemvalue="Application.CodeBlockDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.ArraysDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.SingletonDemo" />
+        <item index="3" class="java.lang.String" itemvalue="Application.StringObject" />
+        <item index="4" class="java.lang.String" itemvalue="Application.Test (2)" />
       </list>
     </recent_temporary>
   </component>
@@ -862,7 +879,7 @@
       <workItem from="1468831696340" duration="5404000" />
       <workItem from="1468886567161" duration="7182000" />
       <workItem from="1468931633363" duration="4086000" />
-      <workItem from="1468974976726" duration="877000" />
+      <workItem from="1468974976726" duration="3189000" />
     </task>
     <servers />
   </component>
@@ -890,7 +907,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="71079000" />
+    <option name="totallyTimeSpent" value="73391000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="0" width="1442" height="901" extended-state="6" />
@@ -949,13 +966,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/ObjectClone/Cat.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="36" column="18" selection-start-line="36" selection-start-column="18" selection-end-line="36" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ObjectClone/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1308,7 +1318,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
+          <folding>
+            <element signature="e#683#684#0" expanded="false" />
+            <element signature="e#707#708#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1322,9 +1335,20 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Arrays/ArraysDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.91201353">
-          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="39" column="29" selection-start-line="39" selection-start-column="29" selection-end-line="39" selection-end-column="29" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/codeBlockDemo/CodeBlockDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.40778342">
+          <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+          <folding>
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
