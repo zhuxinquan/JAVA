@@ -34,6 +34,10 @@ public class ArraysDemo {
         System.out.println(Arrays.toString(s1));
 
         //二分查找，返回位置下标（0开始）
+        for (int i:numbers ) {
+            System.out.print(i + " ");
+        }
+        System.out.println();
         System.out.println(Arrays.binarySearch(numbers, 6));
 
 

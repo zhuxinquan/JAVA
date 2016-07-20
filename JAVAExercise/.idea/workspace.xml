@@ -14,6 +14,11 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/JAVAExercise$StringObject.coverage" NAME="StringObject Coverage Results" MODIFIED="1468931931153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>StringDemo.*</FILTER>
+    </SUITE>
+  </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
@@ -30,15 +35,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="StringObject.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="StringObject.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/StringDemo/StringObject.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.6897274">
-              <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-              <folding>
-                <element signature="e#683#684#0" expanded="true" />
-                <element signature="e#707#708#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="0.0">
+              <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SingletonDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/singletonPattern/SingletonDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ArraysDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/Arrays/ArraysDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.91201353">
+              <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -79,7 +101,6 @@
         <option value="$PROJECT_DIR$/src/MultiLanguage/LocaleDemo.java" />
         <option value="$PROJECT_DIR$/src/MathAndRandom/MathDemo.java" />
         <option value="$PROJECT_DIR$/src/MathAndRandom/RandomDemo.java" />
-        <option value="$PROJECT_DIR$/src/Arrays/ArraysDemo.java" />
         <option value="$PROJECT_DIR$/src/BinarySearch/BinarySearchDemo.java" />
         <option value="$PROJECT_DIR$/src/DateAndCalendar/DateDemo.java" />
         <option value="$PROJECT_DIR$/src/DateAndCalendar/CalendarDemo.java" />
@@ -111,6 +132,8 @@
         <option value="$PROJECT_DIR$/src/StringDemo/String.java" />
         <option value="$PROJECT_DIR$/src/StringDemo/StringObject.java" />
         <option value="$PROJECT_DIR$/src/StringDemo/StringConstant.java" />
+        <option value="$PROJECT_DIR$/src/singletonPattern/SingletonDemo.java" />
+        <option value="$PROJECT_DIR$/src/Arrays/ArraysDemo.java" />
       </list>
     </option>
   </component>
@@ -166,6 +189,7 @@
     </navigator>
     <panes>
       <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -217,9 +241,26 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JAVAExercise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="JAVAExercise" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Arrays" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,56 +281,10 @@
       <recent name="$PROJECT_DIR$/src/程序国际化" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.StringObject">
+  <component name="RunManager" selected="Application.ArraysDemo">
     <configuration default="false" name="Test (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Test" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JAVAExercise" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="CalculateTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="junit4Demo.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <module name="JAVAExercise" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="PACKAGE_NAME" value="junit4Demo" />
-      <option name="MAIN_CLASS_NAME" value="junit4Demo.CalculateTest" />
-      <option name="METHOD_NAME" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="VM_PARAMETERS" value="-ea" />
-      <option name="PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <option name="TEST_SEARCH_SCOPE">
-        <value defaultName="singleModule" />
-      </option>
-      <envs />
-      <patterns />
-      <method />
-    </configuration>
-    <configuration default="false" name="DOubleBall" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="MathAndRandom.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="MathAndRandom.DOubleBall" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -330,6 +325,46 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="StringDemo.StringObject" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JAVAExercise" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="SingletonDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="singletonPattern.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="singletonPattern.SingletonDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JAVAExercise" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ArraysDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="Arrays.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="Arrays.ArraysDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -781,18 +816,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.CalculateTest.add" />
       <item index="1" class="java.lang.String" itemvalue="Application.Test (2)" />
-      <item index="2" class="java.lang.String" itemvalue="JUnit.CalculateTest" />
-      <item index="3" class="java.lang.String" itemvalue="Application.DOubleBall" />
-      <item index="4" class="java.lang.String" itemvalue="Application.StringConstant" />
-      <item index="5" class="java.lang.String" itemvalue="Application.StringObject" />
+      <item index="2" class="java.lang.String" itemvalue="Application.StringConstant" />
+      <item index="3" class="java.lang.String" itemvalue="Application.StringObject" />
+      <item index="4" class="java.lang.String" itemvalue="Application.SingletonDemo" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ArraysDemo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.StringObject" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Test (2)" />
-        <item index="2" class="java.lang.String" itemvalue="Application.StringConstant" />
-        <item index="3" class="java.lang.String" itemvalue="Application.DOubleBall" />
-        <item index="4" class="java.lang.String" itemvalue="JUnit.CalculateTest" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ArraysDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.SingletonDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.StringObject" />
+        <item index="3" class="java.lang.String" itemvalue="Application.Test (2)" />
+        <item index="4" class="java.lang.String" itemvalue="Application.StringConstant" />
       </list>
     </recent_temporary>
   </component>
@@ -825,7 +860,9 @@
       <workItem from="1468721035007" duration="46000" />
       <workItem from="1468723507900" duration="3304000" />
       <workItem from="1468831696340" duration="5404000" />
-      <workItem from="1468886567161" duration="5889000" />
+      <workItem from="1468886567161" duration="7182000" />
+      <workItem from="1468931633363" duration="4086000" />
+      <workItem from="1468974976726" duration="877000" />
     </task>
     <servers />
   </component>
@@ -853,7 +890,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64823000" />
+    <option name="totallyTimeSpent" value="71079000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="1365" y="0" width="1442" height="901" extended-state="6" />
@@ -864,15 +901,15 @@
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.48857144" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33550915" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18668407" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24892086" sideWeight="0.48434925" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.46571428" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.47714287" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.51565075" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3960396" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -880,6 +917,7 @@
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.5342857" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -1045,13 +1083,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Arrays/ArraysDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="35" column="25" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/BinarySearch/BinarySearchDemo.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.52487564">
@@ -1199,7 +1230,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="13" column="13" selection-start-line="0" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1207,14 +1237,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding>
-            <element signature="e#197#198#0" expanded="false" />
-            <element signature="e#231#232#0" expanded="false" />
-            <element signature="e#280#281#0" expanded="false" />
-            <element signature="e#322#323#0" expanded="false" />
-            <element signature="e#363#364#0" expanded="false" />
-            <element signature="e#398#399#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1222,14 +1244,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="47" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#167#168#0" expanded="false" />
-            <element signature="e#195#196#0" expanded="false" />
-            <element signature="e#230#231#0" expanded="false" />
-            <element signature="e#281#282#0" expanded="false" />
-            <element signature="e#322#323#0" expanded="false" />
-            <element signature="e#364#365#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1237,14 +1251,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="6" column="51" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#175#176#0" expanded="false" />
-            <element signature="e#203#204#0" expanded="false" />
-            <element signature="e#252#253#0" expanded="false" />
-            <element signature="e#304#305#0" expanded="false" />
-            <element signature="e#345#346#0" expanded="false" />
-            <element signature="e#387#388#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1252,14 +1258,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="5" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="e#162#163#0" expanded="false" />
-            <element signature="e#190#191#0" expanded="false" />
-            <element signature="e#239#240#0" expanded="false" />
-            <element signature="e#291#292#0" expanded="false" />
-            <element signature="e#332#333#0" expanded="false" />
-            <element signature="e#374#375#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1267,16 +1265,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="5" selection-start-line="20" selection-start-column="5" selection-end-line="20" selection-end-column="5" />
-          <folding>
-            <element signature="e#123#124#0" expanded="false" />
-            <element signature="e#151#152#0" expanded="false" />
-            <element signature="e#191#192#0" expanded="false" />
-            <element signature="e#219#220#0" expanded="false" />
-            <element signature="e#259#260#0" expanded="false" />
-            <element signature="e#287#288#0" expanded="false" />
-            <element signature="e#325#326#0" expanded="false" />
-            <element signature="e#353#354#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1284,7 +1272,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="18" column="1" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1292,9 +1279,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="19" column="32" selection-start-line="19" selection-start-column="32" selection-end-line="19" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1302,10 +1286,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.6866485">
           <caret line="137" column="30" selection-start-line="137" selection-start-column="30" selection-end-line="137" selection-end-column="30" />
-          <folding>
-            <element signature="e#4677#4678#0" expanded="true" />
-            <element signature="e#4714#4715#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1313,7 +1293,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.38155136">
           <caret line="7" column="44" selection-start-line="7" selection-start-column="44" selection-end-line="7" selection-end-column="44" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1327,12 +1306,25 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/StringDemo/StringObject.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.6897274">
-          <caret line="31" column="0" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
-          <folding>
-            <element signature="e#683#684#0" expanded="true" />
-            <element signature="e#707#708#0" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="0.0">
+          <caret line="16" column="29" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/singletonPattern/SingletonDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Arrays/ArraysDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.91201353">
+          <caret line="39" column="28" selection-start-line="39" selection-start-column="28" selection-end-line="39" selection-end-column="28" />
+          <folding />
         </state>
       </provider>
     </entry>
