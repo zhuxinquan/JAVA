@@ -22,6 +22,7 @@ public class login1 extends HttpServlet {
     protected  void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setCharacterEncoding("UTF-8");
         String number = request.getParameter("Number");
+        String checknum = request.getParameter("check_num");
         response.setContentType("text/html;charset=UTF-8");
 
         String ip = request.getHeader(" x-forwarded-for ");
@@ -35,7 +36,7 @@ public class login1 extends HttpServlet {
             ip = request.getRemoteAddr();
         }
 
-       /* if (getIpAddr(ip)) {*/
+        if (getCheckNum(checknum)) {
             if (selectData(number)) {
                 request.getRequestDispatcher(SUCCESS_VIEW).forward(request, response);
             } else {
@@ -43,12 +44,23 @@ public class login1 extends HttpServlet {
                 request.getRequestDispatcher(ERROR_VIEW).forward(request, response);
                 errorss.clear();
             }
-       /* }
-       else{
+        }
+        else{
             request.setAttribute("errorss", errorss);
             request.getRequestDispatcher(ERROR_VIEW).forward(request, response);
             errorss.clear();
-        }*/
+        }
+    }
+
+    public boolean getCheckNum(String checknum){
+        boolean result = false;
+        if(checknum.equals(Check_num.check_num) && checknum != null && checknum.trim().length() != 0){
+            result = true;
+        }
+        else{
+            errorss.add("验证码不正确！");
+        }
+        return result;
     }
 
     public  boolean  getIpAddr(String ip)  {

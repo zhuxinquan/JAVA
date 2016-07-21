@@ -36,15 +36,15 @@
         }
 
 
-        th{
+        th,tr{
             text-align: center;
         }
 
-        #table1{
-            margin-left: 290px;
-            margin-right: 20px;
-            float:none;
-        }
+        /*#table1{*/
+            /*margin-left: 290px;*/
+            /*margin-right: 20px;*/
+            /*float:none;*/
+        /*}*/
 
         .col-md-71{
             margin-top: 100px;
@@ -69,7 +69,7 @@
         </div>
     </div>
     <div id="table1">
-        <div class="col-md-71">
+        <div class="col-md-6 col-md-offset-3">
             <div class="sp1"></div>
             <table style="text-align: center" class="table table-bordered table-hover table-condensed">
                 <thead style="text-align: center">
