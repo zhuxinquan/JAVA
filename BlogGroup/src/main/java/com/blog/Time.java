@@ -65,6 +65,6 @@ public class Time {
 
     public static void  main(String args[])
     {
-        System.out.println(getTime("Tue, 09 Dec 2014 05:58:00 +0800"));;
+        System.out.println(getTime("Tue, 19 Apr 2016 21:01:52 +0800"));;
     }
 }
