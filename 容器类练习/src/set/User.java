@@ -27,6 +27,10 @@ public class User {
         this.sex = sex;
     }
 
+    /**
+     * 自定义对象是否重复的判断条件是：先判断hashCode是否相等，如果不相等，那么一定不是
+     * 如果相等，再调用equals方法进行判断，如果equals方法返回true，表示对象是同一个
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

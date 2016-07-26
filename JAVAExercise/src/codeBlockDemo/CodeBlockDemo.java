@@ -21,13 +21,13 @@ public class CodeBlockDemo {
     }
 
     public static void main(String[] args) {
-        //CodeBlockDemo cd1 = new CodeBlockDemo();
-        //CodeBlockDemo cd2 = new CodeBlockDemo();
+        CodeBlockDemo cd1 = new CodeBlockDemo();
+        CodeBlockDemo cd2 = new CodeBlockDemo();
 
-        {
-            String info = "普通代码块1";
-            System.out.println(info);
-        }
+//        {
+//            String info = "普通代码块1";
+//            System.out.println(info);
+//        }
         //info作用域为普通代码块内部
         //System.out.println(info);
     }
