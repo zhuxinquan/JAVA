@@ -4,7 +4,7 @@ package set;
  * 操作用户类
  * Created by zhuxinquan on 16-2-21.
  */
-public class User {
+public class User implements Comparable<User>{
     private String name;
     private int age;
     private String sex;
@@ -74,5 +74,18 @@ public class User {
 
     public void setSex(String sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public int compareTo(User o) {
+        if(o == null){
+            throw new NullPointerException("参数不能为空");
+        }
+        if(this.age < o.age){
+            return -1;
+        }else if(this.age >= o.age){
+            return 1;
+        }
+        return 0;
     }
 }

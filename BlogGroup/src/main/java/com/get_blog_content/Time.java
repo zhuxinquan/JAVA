@@ -1,11 +1,11 @@
-package com.blog;
+package com.get_blog_content;
 
 /**
  * Created by zhuxinquan on 16-4-26.
  * 传入一个
  */
 public class Time {
-    public static String getTime(String time) {
+    public static String getStandardTime(String time) {
         String ans = "";
         if(time.charAt(0) == '2')
         {
@@ -61,10 +61,5 @@ public class Time {
             ans += time.substring(17, 17+8);
         }
         return ans;
-    }
-
-    public static void  main(String args[])
-    {
-        System.out.println(getTime("Tue, 19 Apr 2016 21:01:52 +0800"));;
     }
 }

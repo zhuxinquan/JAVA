@@ -1,4 +1,4 @@
-package com.blog;
+package com.get_blog_content;
 
 import java.sql.*;
 import java.util.ResourceBundle;

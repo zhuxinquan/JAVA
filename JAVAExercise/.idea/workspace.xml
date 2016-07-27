@@ -40,7 +40,18 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-              <folding />
+              <folding>
+                <element signature="e#440#441#0" expanded="false" />
+                <element signature="e#495#496#0" expanded="false" />
+                <element signature="e#528#529#0" expanded="false" />
+                <element signature="e#560#561#0" expanded="false" />
+                <element signature="e#677#678#0" expanded="false" />
+                <element signature="e#713#714#0" expanded="false" />
+                <element signature="e#739#740#0" expanded="false" />
+                <element signature="e#782#783#0" expanded="false" />
+                <element signature="e#809#810#0" expanded="false" />
+                <element signature="e#853#854#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -50,27 +61,12 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StaticInnerClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/inner_class/StaticInnerClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AnonymityInnerClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/inner_class/AnonymityInnerClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="32" column="28" selection-start-line="32" selection-start-column="28" selection-end-line="32" selection-end-column="28" />
-              <folding />
+              <folding>
+                <element signature="e#846#847#0" expanded="false" />
+                <element signature="e#874#875#0" expanded="false" />
+                <element signature="e#940#941#0" expanded="false" />
+                <element signature="e#969#970#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,7 +76,9 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
+              <folding>
+                <element signature="imports" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -90,7 +88,10 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-              <folding />
+              <folding>
+                <element signature="e#580#581#0" expanded="false" />
+                <element signature="e#620#621#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -115,12 +116,39 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CodeBlockDemo.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CodeBlockDemo.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/codeBlockDemo/CodeBlockDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5793872">
+            <state vertical-scroll-proportion="0.0">
               <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-              <folding />
+              <folding>
+                <element signature="e#242#243#0" expanded="true" />
+                <element signature="e#284#285#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="IteratorDemo.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/iterator/IteratorDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0">
+              <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ListIteratorDemo.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/iterator/ListIteratorDemo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.38961038">
+              <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -130,7 +158,14 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-              <folding />
+              <folding>
+                <element signature="e#197#198#0" expanded="false" />
+                <element signature="e#231#232#0" expanded="false" />
+                <element signature="e#280#281#0" expanded="false" />
+                <element signature="e#322#323#0" expanded="false" />
+                <element signature="e#363#364#0" expanded="false" />
+                <element signature="e#398#399#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -153,8 +188,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/程序国际化/LocaleDemo.java" />
-        <option value="$PROJECT_DIR$/src/MultiLanguage/info_zh_CN.properties" />
         <option value="$PROJECT_DIR$/src/MultiLanguage/info_en_US.properties" />
         <option value="$PROJECT_DIR$/src/MultiLanguage/LocaleDemo.java" />
         <option value="$PROJECT_DIR$/src/MathAndRandom/MathDemo.java" />
@@ -204,6 +237,8 @@
         <option value="$PROJECT_DIR$/src/test_package/TestPackage.java" />
         <option value="$PROJECT_DIR$/src/charsetcode/SpliteAndMergeFile.java" />
         <option value="$PROJECT_DIR$/src/codeBlockDemo/CodeBlockDemo.java" />
+        <option value="$PROJECT_DIR$/src/iterator/IteratorDemo.java" />
+        <option value="$PROJECT_DIR$/src/iterator/ListIteratorDemo.java" />
       </list>
     </option>
   </component>
@@ -223,10 +258,9 @@
     <treeState />
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
-    <option name="y" value="27" />
-    <option name="width" value="1368" />
-    <option name="height" value="742" />
+    <option name="x" value="1365" />
+    <option name="width" value="1442" />
+    <option name="height" value="901" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -259,8 +293,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -296,6 +328,8 @@
         </subPane>
       </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -324,47 +358,7 @@
       <recent name="$PROJECT_DIR$/src/程序国际化" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.CodeBlockDemo">
-    <configuration default="false" name="LinkListDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="linklist.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="linklist.LinkListDemo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JAVAExercise" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="WrapperClassDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="wrapperclass.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="wrapperclass.WrapperClassDemo" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="JAVAExercise" />
-      <envs />
-      <method />
-    </configuration>
+  <component name="RunManager" selected="Application.ListIteratorDemo">
     <configuration default="false" name="TestPackage" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -413,6 +407,46 @@
         </pattern>
       </extension>
       <option name="MAIN_CLASS_NAME" value="codeBlockDemo.CodeBlockDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JAVAExercise" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="IteratorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="iterator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="iterator.IteratorDemo" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="JAVAExercise" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="ListIteratorDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="iterator.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="iterator.ListIteratorDemo" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -863,19 +897,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="JUnit.CalculateTest.add" />
-      <item index="1" class="java.lang.String" itemvalue="Application.LinkListDemo" />
-      <item index="2" class="java.lang.String" itemvalue="Application.WrapperClassDemo" />
-      <item index="3" class="java.lang.String" itemvalue="Application.TestPackage" />
-      <item index="4" class="java.lang.String" itemvalue="Application.SpliteAndMergeFile" />
-      <item index="5" class="java.lang.String" itemvalue="Application.CodeBlockDemo" />
+      <item index="1" class="java.lang.String" itemvalue="Application.TestPackage" />
+      <item index="2" class="java.lang.String" itemvalue="Application.SpliteAndMergeFile" />
+      <item index="3" class="java.lang.String" itemvalue="Application.CodeBlockDemo" />
+      <item index="4" class="java.lang.String" itemvalue="Application.IteratorDemo" />
+      <item index="5" class="java.lang.String" itemvalue="Application.ListIteratorDemo" />
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.CodeBlockDemo" />
-        <item index="1" class="java.lang.String" itemvalue="Application.SpliteAndMergeFile" />
-        <item index="2" class="java.lang.String" itemvalue="Application.TestPackage" />
-        <item index="3" class="java.lang.String" itemvalue="Application.WrapperClassDemo" />
-        <item index="4" class="java.lang.String" itemvalue="Application.LinkListDemo" />
+        <item index="0" class="java.lang.String" itemvalue="Application.ListIteratorDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.IteratorDemo" />
+        <item index="2" class="java.lang.String" itemvalue="Application.CodeBlockDemo" />
+        <item index="3" class="java.lang.String" itemvalue="Application.SpliteAndMergeFile" />
+        <item index="4" class="java.lang.String" itemvalue="Application.TestPackage" />
       </list>
     </recent_temporary>
   </component>
@@ -916,6 +950,7 @@
       <workItem from="1469145485279" duration="10063000" />
       <workItem from="1469231526579" duration="10356000" />
       <workItem from="1469454153731" duration="362000" />
+      <workItem from="1469496551345" duration="5794000" />
     </task>
     <servers />
   </component>
@@ -943,11 +978,11 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="113665000" />
+    <option name="totallyTimeSpent" value="119459000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
-    <editor active="false" />
+    <frame x="1365" y="0" width="1442" height="901" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -956,10 +991,10 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3294893" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.48857144" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35584843" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3550914" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32898173" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26291794" sideWeight="0.48434925" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26258993" sideWeight="0.48434925" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32978722" sideWeight="0.46571428" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.47714287" order="1" side_tool="false" content_ui="tabs" />
@@ -1002,26 +1037,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/MultiLanguage/info_zh_CN.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MultiLanguage/info_en_US.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="16" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/MultiLanguage/info_en_US.properties">
       <provider editor-type-id="ResourceBundle">
         <state />
@@ -1298,7 +1313,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="42" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1322,7 +1336,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1330,7 +1346,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="15" column="27" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
+          <folding>
+            <element signature="e#580#581#0" expanded="false" />
+            <element signature="e#620#621#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1338,7 +1357,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="9" column="24" selection-start-line="9" selection-start-column="24" selection-end-line="9" selection-end-column="24" />
-          <folding />
+          <folding>
+            <element signature="e#197#198#0" expanded="false" />
+            <element signature="e#231#232#0" expanded="false" />
+            <element signature="e#280#281#0" expanded="false" />
+            <element signature="e#322#323#0" expanded="false" />
+            <element signature="e#363#364#0" expanded="false" />
+            <element signature="e#398#399#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1346,7 +1372,18 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="36" selection-start-line="25" selection-start-column="36" selection-end-line="25" selection-end-column="36" />
-          <folding />
+          <folding>
+            <element signature="e#440#441#0" expanded="false" />
+            <element signature="e#495#496#0" expanded="false" />
+            <element signature="e#528#529#0" expanded="false" />
+            <element signature="e#560#561#0" expanded="false" />
+            <element signature="e#677#678#0" expanded="false" />
+            <element signature="e#713#714#0" expanded="false" />
+            <element signature="e#739#740#0" expanded="false" />
+            <element signature="e#782#783#0" expanded="false" />
+            <element signature="e#809#810#0" expanded="false" />
+            <element signature="e#853#854#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1354,7 +1391,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="6" selection-start-line="39" selection-start-column="6" selection-end-line="39" selection-end-column="6" />
-          <folding />
+          <folding>
+            <element signature="e#846#847#0" expanded="false" />
+            <element signature="e#874#875#0" expanded="false" />
+            <element signature="e#940#941#0" expanded="false" />
+            <element signature="e#969#970#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1376,9 +1418,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/codeBlockDemo/CodeBlockDemo.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5793872">
+        <state vertical-scroll-proportion="0.0">
           <caret line="14" column="18" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
+          <folding>
+            <element signature="e#242#243#0" expanded="true" />
+            <element signature="e#284#285#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iterator/IteratorDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="25" column="17" selection-start-line="25" selection-start-column="17" selection-end-line="25" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/iterator/ListIteratorDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38961038">
+          <caret line="16" column="39" selection-start-line="16" selection-start-column="39" selection-end-line="16" selection-end-column="39" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

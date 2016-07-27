@@ -23,10 +23,12 @@
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
         <module name="BlogGroup" />
+        <module name="GroupBlog" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="BlogGroup" target="1.5" />
+      <module name="GroupBlog" target="1.5" />
     </bytecodeTargetLevel>
   </component>
 </project>

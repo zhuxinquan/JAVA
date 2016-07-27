@@ -1,5 +1,3 @@
-package com.blog;
-
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.client.methods.HttpGet;
@@ -19,7 +17,9 @@ public class HttpClient {
         //HttpClient
         CloseableHttpClient closeableHttpClient = httpClientBuilder.build();
 
-        HttpGet httpGet = new HttpGet("http://blog.csdn.net");
+        HttpGet httpGet = new HttpGet("http://get_blog_content.csdn.net/zhuxinquan61/rss/list");
+//        HttpGet httpGet = new HttpGet("http://www.baidu.com");
+        httpGet.setHeader("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3");
         System.out.println(httpGet.getRequestLine());
         try {
             //执行get请求
@@ -31,7 +31,7 @@ public class HttpClient {
             //判断响应实体是否为空
             if (entity != null) {
                 System.out.println("contentEncoding:" + entity.getContentEncoding());
-                System.out.println("response content:" + EntityUtils.toString(entity));
+                System.out.println("response content:\n" + EntityUtils.toString(entity));
             }
         } catch (IOException e) {
             e.printStackTrace();

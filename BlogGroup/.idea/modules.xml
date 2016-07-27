@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/BlogGroup.iml" filepath="$PROJECT_DIR$/BlogGroup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/GroupBlog.iml" filepath="$PROJECT_DIR$/GroupBlog.iml" />
     </modules>
   </component>
 </project>

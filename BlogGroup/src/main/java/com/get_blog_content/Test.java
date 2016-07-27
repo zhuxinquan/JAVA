@@ -1,26 +1,14 @@
-package com.blog;
+package com.get_blog_content;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.ParseException;
 import org.apache.http.client.*;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
-import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
-import org.apache.http.conn.ssl.SSLContexts;
-import org.apache.http.conn.ssl.TrustSelfSignedStrategy;
-import org.apache.http.entity.mime.Header;
 import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
-import org.apache.http.util.EncodingUtils;
-import org.apache.http.util.EntityUtils;
 
-import javax.net.ssl.SSLContext;
 import java.io.*;
-import java.security.KeyManagementException;
-import java.security.KeyStore;
-import java.security.KeyStoreException;
-import java.security.NoSuchAlgorithmException;
-import java.security.cert.CertificateException;
 
 /**
  * Created by zhuxinquan on 16-4-20.
@@ -30,7 +18,7 @@ public class Test {
         CloseableHttpClient httpclient = HttpClients.createDefault();
         try {
             // 创建httpget.
-            HttpGet httpget = new HttpGet("http://blog.csdn.net");
+            HttpGet httpget = new HttpGet("http://get_blog_content.csdn.net");
             System.out.println("executing request " + httpget.getURI());
 //            httpget.getParams().setParameter("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3");
             httpget.setHeader("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3");

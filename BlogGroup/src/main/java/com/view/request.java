@@ -1,4 +1,4 @@
-package com.blog;
+package com.view;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -261,10 +261,10 @@ public class request extends HttpServlet {
                 "\n" +
                 "<h5 id=\"初次学习错误之处还望指正\">！！初次学习，错误之处还望指正～～～</h5>\n" +
                 "            <div>\n" +
-                "                作者：zhuxinquan61 发表于2016/1/22 16:54:19 <a href=\"http://blog.csdn.net/zhuxinquan61/article/details/50562312\">原文链接</a>\n" +
+                "                作者：zhuxinquan61 发表于2016/1/22 16:54:19 <a href=\"http://get_blog_content.csdn.net/zhuxinquan61/article/details/50562312\">原文链接</a>\n" +
                 "            </div>\n" +
                 "            <div>\n" +
-                "            阅读：52 评论：1 <a href=\"http://blog.csdn.net/zhuxinquan61/article/details/50562312#comments\" target=\"_blank\">查看评论</a>\n" +
+                "            阅读：52 评论：1 <a href=\"http://get_blog_content.csdn.net/zhuxinquan61/article/details/50562312#comments\" target=\"_blank\">查看评论</a>\n" +
                 "            </div>");
         out.print("</body>");
         out.print("</html>");
