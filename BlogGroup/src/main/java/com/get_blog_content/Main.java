@@ -10,11 +10,17 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         Collection<User> users = GetGroupUsers.getGroupusers();
+        Collection<Tag> tags = Tag.getAllTags();
         List blogContentInfos = new LinkedList<BlogContentInfo>();
         GetContentInfo getContentInfo = null;
         for (User u: users) {
-            getContentInfo = new GetContentInfo(u.getBlogAddress(),  u.getBlogType(), u.getUpdateTime());
-            blogContentInfos.addAll(getContentInfo.getContentInfo());
+            for(Tag t : tags){
+                if(t.getBlogType().equals(u.getBlogType())){
+                    getContentInfo = new GetContentInfo(u, t);
+                    blogContentInfos.addAll(getContentInfo.getContentInfo());
+                    break;
+                }
+            }
         }
         BlogContentCrud.storeBlogContentCollection(blogContentInfos);
     }

@@ -10,6 +10,18 @@ public class User {
     private String Grade;
     private String UpdateTime;
 
+
+    public User() {
+    }
+
+    public User(String name, String blogAddress, String blogType, String grade, String updateTime) {
+        Name = name;
+        BlogAddress = blogAddress;
+        BlogType = blogType;
+        Grade = grade;
+        UpdateTime = updateTime;
+    }
+
     public String getName() {
         return Name;
     }

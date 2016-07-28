@@ -4,6 +4,9 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.Collection;
+import java.util.LinkedList;
+import java.util.List;
 
 /**
  * Created by zhuxinquan on 16-4-25.
@@ -20,6 +23,43 @@ public class Tag {
     private String Category;
     private String Summary;
 
+    public static Collection<Tag> getAllTags(){
+        List<Tag> tags = new LinkedList<Tag>();
+        Tag t = null;
+        Connection conn = DBUtils.getConnection();
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        String sql = "select * from T_tags";
+        try {
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            while(rs.next()){
+                t = new Tag();
+                t.setBlogType(rs.getString("BlogType"));
+                t.setRss(rs.getString("Rss"));
+                t.setItem(rs.getString("Item"));
+                t.setBlogArticleLink(rs.getString("BlogArticleLink"));
+                t.setTitle(rs.getString("Title"));
+                t.setPublished(rs.getString("Published"));
+                t.setAuthor(rs.getString("Author"));
+                t.setContent(rs.getString("Content"));
+                t.setCategory(rs.getString("Category"));
+                t.setSummary(rs.getString("Summary"));
+                tags.add(t);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }finally {
+            DBUtils.close(rs, ps, conn);
+        }
+        return tags;
+    }
+
+    /**
+     * 通过类型获取单个tag标签
+     * @param blogType 博客类型
+     * @return 博客标签对象
+     */
     public static Tag getTag(String blogType){
         Tag tag = new Tag();
         Connection conn = DBUtils.getConnection();

@@ -6,6 +6,7 @@ import org.apache.http.HttpResponse;
 import org.apache.http.client.HttpClient;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.omg.CORBA.TIMEOUT;
 import org.w3c.dom.Element;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
@@ -26,21 +27,27 @@ import java.util.List;
  */
 public class GetContentInfo {
     public static void main(String[] args) {
-        GetContentInfo info = new GetContentInfo("http://feed.cnblogs.com/blog/u/39275/rss", "cnblog", Time.getStandardTime("2009-01-09T05:47:00Z"));
-        info.getContentInfo();
+        GetContentInfo info = new GetContentInfo(new User("刘", "http://feed.cnblogs.com/blog/u/39275/rss", "cnblogs", "2014", Time.getStandardTime("2009-09-08T07:50:00Z")),
+                Tag.getTag("cnblog"));
+        Collection<BlogContentInfo> bs = info.getContentInfo();
+        for(BlogContentInfo b : bs){
+            System.out.println(b);
+        }
     }
     private String url;
     private String blogType;
     private String updateTime;
     private Tag tag = null;
+    private User u = null;
     private BlogContentInfo blogContentInfo = null;
     private List<BlogContentInfo> blogContentInfos = new ArrayList<BlogContentInfo>();
 
-    public GetContentInfo(String url, String blogType, String updateTime) {
-        this.url = url;
-        this.blogType = blogType;
-        tag = Tag.getTag(blogType);
-        this.updateTime = updateTime;
+    public GetContentInfo(User user, Tag t) {
+        this.u = user;
+        this.url = user.getBlogAddress();
+        this.blogType = user.getBlogType();
+        tag = t;
+        this.updateTime = user.getUpdateTime();
     }
 
     /**
@@ -67,30 +74,45 @@ public class GetContentInfo {
 
         Element element = document.getDocumentElement();
         NodeList items = element.getElementsByTagName(tag.getItem());
-        System.out.println(items.getLength());
+        //System.out.println(items.getLength());
         for (int i = 0; i < items.getLength(); i++) {
+            //System.out.println("============================================");
             blogContentInfo = new BlogContentInfo();
             Element item = (Element) items.item(i);
             NodeList itemChildNode = item.getChildNodes();
             for(int j = 0; j < itemChildNode.getLength(); j++){
                 if(tag.getTitle().equals(itemChildNode.item(j).getNodeName())) {
-                    System.out.println("title: " + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    //System.out.println("title: " + itemChildNode.item(j).getFirstChild().getNodeValue());
                     blogContentInfo.setTitle(itemChildNode.item(j).getFirstChild().getNodeValue());
                 }else if(tag.getBlogArticleLink().equals(itemChildNode.item(j).getNodeName())) {
-                    System.out.println("link: " + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    //System.out.println("link: " + itemChildNode.item(j).getFirstChild().getNodeValue());
                     blogContentInfo.setBlogArticleLink(itemChildNode.item(j).getFirstChild().getNodeValue());
                 }else if(tag.getAuthor().equals(itemChildNode.item(j).getNodeName())) {
-                    System.out.println("author: " + itemChildNode.item(j).getFirstChild().getNodeValue());
-                    blogContentInfo.setAuthor(itemChildNode.item(j).getFirstChild().getNodeValue());
+                    if("feed".equals(tag.getRss())){
+                        NodeList authorList = itemChildNode.item(j).getChildNodes();
+                        for(int k = 0; k < authorList.getLength(); k++){
+                            if("name".equals(authorList.item(k).getNodeName())){
+                                //System.out.println("author: " + authorList.item(k).getFirstChild().getNodeValue());
+                                blogContentInfo.setAuthor(authorList.item(k).getFirstChild().getNodeValue());
+                            }
+                        }
+                    }
                 }else if(tag.getPublished().equals(itemChildNode.item(j).getNodeName())) {
-                    System.out.println("pubDate: " + itemChildNode.item(j).getFirstChild().getNodeValue());
-                    blogContentInfo.setPubDate(itemChildNode.item(j).getFirstChild().getNodeValue());
-                }else if(tag.getSummary().equals(itemChildNode.item(j).getNodeName())) {
-                    System.out.println("description: " + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    //System.out.println("pubDate: " + Time.getStandardTime(itemChildNode.item(j).getFirstChild().getNodeValue()));
+                    if(Time.getStandardTime(u.getUpdateTime()).compareTo(Time.getStandardTime(itemChildNode.item(j).getFirstChild().getNodeValue())) < 0){
+                        blogContentInfo.setPubDate(Time.getStandardTime(itemChildNode.item(j).getFirstChild().getNodeValue()));
+                    }else{
+                        return blogContentInfos;
+                    }
+                }else if(itemChildNode.item(j).getNodeName().equals(tag.getSummary())) {
+                    //System.out.println("description: " + itemChildNode.item(j).getFirstChild().getNodeValue());
                     blogContentInfo.setSummary(itemChildNode.item(j).getFirstChild().getNodeValue());
                 }else if(tag.getContent().equals(itemChildNode.item(j).getNodeName())){
-                    System.out.println("content：" + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    //System.out.println("content：" + itemChildNode.item(j).getFirstChild().getNodeValue());
                     blogContentInfo.setArticleDetail(itemChildNode.item(j).getFirstChild().getNodeValue());
+                }else if(itemChildNode.item(j).getNodeName().equals(tag.getCategory())){
+                    //System.out.println("Category：" + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    blogContentInfo.setCategory(itemChildNode.item(j).getFirstChild().getNodeValue());
                 }
             }
             blogContentInfos.add(blogContentInfo);
