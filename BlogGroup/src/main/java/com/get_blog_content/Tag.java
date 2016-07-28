@@ -11,7 +11,6 @@ import java.sql.SQLException;
 public class Tag {
     private String BlogType;
     private String Rss;
-    private String Updated;
     private String Item;
     private String BlogArticleLink;
     private String Title;
@@ -33,7 +32,6 @@ public class Tag {
             if(rs.next()){
                 tag.setBlogType(rs.getString("BlogType"));
                 tag.setRss(rs.getString("Rss"));
-                tag.setUpdated(rs.getString("Updated"));
                 tag.setItem(rs.getString("Item"));
                 tag.setBlogArticleLink(rs.getString("BlogArticleLink"));
                 tag.setTitle(rs.getString("Title"));
@@ -68,14 +66,6 @@ public class Tag {
 
     public void setRss(String rss) {
         Rss = rss;
-    }
-
-    public String getUpdated() {
-        return Updated;
-    }
-
-    public void setUpdated(String updated) {
-        Updated = updated;
     }
 
     public String getItem() {
@@ -147,7 +137,6 @@ public class Tag {
         return "Tags{" +
                 "BlogType='" + BlogType + '\'' +
                 ", Rss='" + Rss + '\'' +
-                ", Updated='" + Updated + '\'' +
                 ", Item='" + Item + '\'' +
                 ", BlogArticleLink='" + BlogArticleLink + '\'' +
                 ", Title='" + Title + '\'' +

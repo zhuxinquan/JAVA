@@ -10,16 +10,6 @@ public class User {
     private String Grade;
     private String UpdateTime;
 
-    @Override
-    public int hashCode() {
-        return super.hashCode();
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        return super.equals(obj);
-    }
-
     public String getName() {
         return Name;
     }

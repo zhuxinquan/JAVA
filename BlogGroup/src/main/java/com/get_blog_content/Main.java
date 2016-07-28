@@ -13,7 +13,7 @@ public class Main {
         List blogContentInfos = new LinkedList<BlogContentInfo>();
         GetContentInfo getContentInfo = null;
         for (User u: users) {
-            getContentInfo = new GetContentInfo(u.getBlogAddress(),  u.getBlogType());
+            getContentInfo = new GetContentInfo(u.getBlogAddress(),  u.getBlogType(), u.getUpdateTime());
             blogContentInfos.addAll(getContentInfo.getContentInfo());
         }
         BlogContentCrud.storeBlogContentCollection(blogContentInfos);

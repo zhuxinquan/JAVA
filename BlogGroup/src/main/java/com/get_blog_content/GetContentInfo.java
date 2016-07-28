@@ -26,18 +26,21 @@ import java.util.List;
  */
 public class GetContentInfo {
     public static void main(String[] args) {
-        GetContentInfo info = new GetContentInfo("http://feed.cnblogs.com/blog/u/39275/rss", "cnblog");
+        GetContentInfo info = new GetContentInfo("http://feed.cnblogs.com/blog/u/39275/rss", "cnblog", Time.getStandardTime("2009-01-09T05:47:00Z"));
         info.getContentInfo();
     }
     private String url;
     private String blogType;
+    private String updateTime;
     private Tag tag = null;
+    private BlogContentInfo blogContentInfo = null;
     private List<BlogContentInfo> blogContentInfos = new ArrayList<BlogContentInfo>();
 
-    public GetContentInfo(String url, String blogType) {
+    public GetContentInfo(String url, String blogType, String updateTime) {
         this.url = url;
         this.blogType = blogType;
         tag = Tag.getTag(blogType);
+        this.updateTime = updateTime;
     }
 
     /**
@@ -46,15 +49,6 @@ public class GetContentInfo {
      * @return
      */
     public List<BlogContentInfo> doDocumentBuild(InputStream inputStream){
-//        byte[] bytes = new byte[1024];
-//        int len = -1;
-//        try {
-//            while((len = inputStream.read(bytes)) != -1){
-//                System.out.println(bytes.toString());
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
         DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
         DocumentBuilder builder = null;
         try {
@@ -72,41 +66,34 @@ public class GetContentInfo {
         }
 
         Element element = document.getDocumentElement();
-        System.out.println(tag.getTitle());
-        //得到item标签及其中的内容
-        NodeList items = element.getElementsByTagName(tag.getContent());
+        NodeList items = element.getElementsByTagName(tag.getItem());
+        System.out.println(items.getLength());
         for (int i = 0; i < items.getLength(); i++) {
-            System.out.println("---------------");
-            System.out.println(items.item(i).getFirstChild().getNodeValue());
-            System.out.println("---------------");
-//            BlogContentInfo blogContentInfo = new BlogContentInfo();
-//            Element item = (Element) items.item(i);
-//            NodeList childNodes = item.getChildNodes();
-//            for (int j = 0; j < childNodes.getLength(); j++) {
-//                //Dom将最小标签中的内容仍然当做一个子结点
-//                if("title".equals(childNodes.item(j).getNodeName())) {
-//                    System.out.println("title: " + childNodes.item(j).getFirstChild().getNodeValue());
-//                    blogContentInfo.setTitle(childNodes.item(j).getFirstChild().getNodeValue());
-//                }else if("link".equals(childNodes.item(j).getNodeName())) {
-//                    System.out.println("link: " + childNodes.item(j).getFirstChild().getNodeValue());
-//                    blogContentInfo.setLink(childNodes.item(j).getFirstChild().getNodeValue());
-//                }else if("guid".equals(childNodes.item(j).getNodeName())) {
-//                    System.out.println("guid: " +childNodes.item(j).getFirstChild().getNodeValue());
-//                    blogContentInfo.setGuid(childNodes.item(j).getFirstChild().getNodeValue());
-//                }else if("author".equals(childNodes.item(j).getNodeName())) {
-//                    System.out.println("author: " + childNodes.item(j).getFirstChild().getNodeValue());
-//                    blogContentInfo.setAuthor(childNodes.item(j).getFirstChild().getNodeValue());
-//                }else if("pubDate".equals(childNodes.item(j).getNodeName())) {
-//                    System.out.println("pubDate: " + childNodes.item(j).getFirstChild().getNodeValue());
-//                    blogContentInfo.setPubDate(childNodes.item(j).getFirstChild().getNodeValue());
-//                }else if("description".equals(childNodes.item(j).getNodeName())) {
-//                    System.out.println("description: " + childNodes.item(j).getFirstChild().getNodeValue());
-//                    blogContentInfo.setPubDate(childNodes.item(j).getFirstChild().getNodeValue());
-//                }else if("content:encoded".equals(childNodes.item(j).getNodeName())){
-//                    System.out.println("content：" + childNodes.item(j).getFirstChild().getNodeValue());
-////                    blogContentInfo.setPubDate(childNodes.item(j).getFirstChild().getNodeValue());
-//                }
-//            }
+            blogContentInfo = new BlogContentInfo();
+            Element item = (Element) items.item(i);
+            NodeList itemChildNode = item.getChildNodes();
+            for(int j = 0; j < itemChildNode.getLength(); j++){
+                if(tag.getTitle().equals(itemChildNode.item(j).getNodeName())) {
+                    System.out.println("title: " + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    blogContentInfo.setTitle(itemChildNode.item(j).getFirstChild().getNodeValue());
+                }else if(tag.getBlogArticleLink().equals(itemChildNode.item(j).getNodeName())) {
+                    System.out.println("link: " + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    blogContentInfo.setBlogArticleLink(itemChildNode.item(j).getFirstChild().getNodeValue());
+                }else if(tag.getAuthor().equals(itemChildNode.item(j).getNodeName())) {
+                    System.out.println("author: " + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    blogContentInfo.setAuthor(itemChildNode.item(j).getFirstChild().getNodeValue());
+                }else if(tag.getPublished().equals(itemChildNode.item(j).getNodeName())) {
+                    System.out.println("pubDate: " + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    blogContentInfo.setPubDate(itemChildNode.item(j).getFirstChild().getNodeValue());
+                }else if(tag.getSummary().equals(itemChildNode.item(j).getNodeName())) {
+                    System.out.println("description: " + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    blogContentInfo.setSummary(itemChildNode.item(j).getFirstChild().getNodeValue());
+                }else if(tag.getContent().equals(itemChildNode.item(j).getNodeName())){
+                    System.out.println("content：" + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    blogContentInfo.setArticleDetail(itemChildNode.item(j).getFirstChild().getNodeValue());
+                }
+            }
+            blogContentInfos.add(blogContentInfo);
         }
         return blogContentInfos;
     }

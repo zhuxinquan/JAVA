@@ -5,6 +5,11 @@ package com.get_blog_content;
  * 传入一个
  */
 public class Time {
+
+    public static void main(String[] args) {
+        System.out.println(getStandardTime("2009-10-21T03:41:00Z"));
+    }
+
     public static String getStandardTime(String time) {
         String ans = "";
         if(time.charAt(0) == '2')
