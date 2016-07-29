@@ -78,6 +78,7 @@ public class GetContentInfo {
         for (int i = 0; i < items.getLength(); i++) {
             //System.out.println("============================================");
             blogContentInfo = new BlogContentInfo();
+            blogContentInfo.setBlogAddress(u.getBlogAddress());
             Element item = (Element) items.item(i);
             NodeList itemChildNode = item.getChildNodes();
             for(int j = 0; j < itemChildNode.getLength(); j++){
