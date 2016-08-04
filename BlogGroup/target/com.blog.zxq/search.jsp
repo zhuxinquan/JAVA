@@ -31,6 +31,19 @@
 						</span>
             </div>
             <div id="seart">
+                <table>
+                    <tbody>
+                    <tr>
+                        <td>
+                            <a href="index.jsp"><span class="tlb">返回首页</span></a>
+                            <span>|</span>
+                            <a href="https://www.xiyoulinux.org" target="_blank"><span class="tlb">官网链接</span></a>
+                            <span>|</span>
+                            <a href="http://cs.xiyoulinux.org" target="_blank"><span class="tlb">CS平台登陆</span></a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
                 <form action="search.jsp" method="post">
                     <label>
                         <input type="text" name="search"></label>

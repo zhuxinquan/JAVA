@@ -14,6 +14,9 @@ public class Main {
         List blogContentInfos = new LinkedList<BlogContentInfo>();
         GetContentInfo getContentInfo = null;
         for (User u: users) {
+            if(u.getId() == 7 || u.getId() == 17 || u.getId() == 24 || u.getId() == 10){
+                continue;
+            }
             for(Tag t : tags){
                 if(t.getBlogType().equals(u.getBlogType())){
                     getContentInfo = new GetContentInfo(u, t);
@@ -22,7 +25,8 @@ public class Main {
                 }
             }
             System.out.println(u.getId() + "/" + users.size());
+            BlogContentCrud.storeBlogContentCollection(blogContentInfos, u);
+            blogContentInfos.clear();
         }
-        BlogContentCrud.storeBlogContentCollection(blogContentInfos);
     }
 }

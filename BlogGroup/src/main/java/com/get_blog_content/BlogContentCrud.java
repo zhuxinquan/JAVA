@@ -11,16 +11,27 @@ import java.util.Set;
  */
 public class BlogContentCrud {
 
-    public static void storeBlogContentCollection(Collection<BlogContentInfo> c){
+    public static void storeBlogContentCollection(Collection<BlogContentInfo> c, User u){
         int size = c.size();
         int i = 1;
         PreparedStatement ps = null;
         Connection conn = null;
         conn = DBUtils.getConnection();
+        PreparedStatement ps1 = null;
+        Connection conn1 = null;
+        conn1 = DBUtils.getConnection();
         String sql = "insert into T_blog(uid, BlogArticleLink, Title, Author, PubDate, ArticleDetail, Summary, Category) values(?, ?, ?, ?, ?, ?, ?, ?)";
         try {
             ps = conn.prepareStatement(sql);
             for(BlogContentInfo blog: c){
+                if(blog.getPubDate() < u.getUpdateTime()){
+                    continue;
+                }
+                if(blog.getPubDate() > u.getUpdateTime()){
+                    String sqlTime = "update T_user set UpdateTime = " + blog.getPubDate() + " where id = " + blog.getUid();
+                    ps1 = conn1.prepareStatement(sqlTime);
+                    ps1.executeUpdate();
+                }
                 ps.setInt(1, blog.getUid());
                 ps.setString(2, blog.getBlogArticleLink());
                 ps.setString(3, blog.getTitle());
@@ -36,6 +47,7 @@ public class BlogContentCrud {
             e.printStackTrace();
         } finally {
             DBUtils.close(null, ps, conn);
+            DBUtils.close(null, ps1, conn1);
         }
     }
 

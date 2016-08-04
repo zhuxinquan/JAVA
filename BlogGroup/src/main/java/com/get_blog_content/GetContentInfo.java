@@ -18,7 +18,6 @@ import java.io.*;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.List;
 
 
@@ -111,16 +110,6 @@ public class GetContentInfo {
 //                    System.out.println("pubDate: " + Time.getStandardTime(itemChildNode.item(j).getFirstChild().getNodeValue()));
                     if(u.getUpdateTime() < Time.getDateTime(Time.getStandardTime(itemChildNode.item(j).getFirstChild().getNodeValue())).getTime()){
                         blogContentInfo.setPubDate(Time.getDateTime(Time.getStandardTime(itemChildNode.item(j).getFirstChild().getNodeValue())).getTime());
-                        if(flag == 1){
-                            String sql = "update T_user set UpdateTime = " + blogContentInfo.getPubDate() + " where id = " + blogContentInfo.getUid();
-                            try {
-                                ps = conn.prepareStatement(sql);
-                                ps.executeUpdate(sql);
-                            } catch (SQLException e) {
-                                e.printStackTrace();
-                            }
-                            flag = 0;
-                        }
                     }else{
                         //返回前先断开数据库链接
                         DBUtils.close(rs, ps, conn);
@@ -133,7 +122,7 @@ public class GetContentInfo {
                     //System.out.println("content：" + itemChildNode.item(j).getFirstChild().getNodeValue());
                     blogContentInfo.setArticleDetail(itemChildNode.item(j).getFirstChild().getNodeValue());
                 }else if(itemChildNode.item(j).getNodeName().equals(tag.getCategory())){
-                    if(item.getFirstChild().getNodeValue().trim().length() == 0){
+                    if(itemChildNode.item(j).getChildNodes().getLength() == 0){
                         continue;
                     }
                     if(list.contains(new String(itemChildNode.item(j).getFirstChild().getNodeValue())) == false){
@@ -146,7 +135,7 @@ public class GetContentInfo {
                             e.printStackTrace();
                         }
                     }
-                    //System.out.println("Category：" + itemChildNode.item(j).getFirstChild().getNodeValue());
+                    System.out.println("Category：" + itemChildNode.item(j).getFirstChild().getNodeValue());
                     if(blogContentInfo.getCategory() == null){
                         blogContentInfo.setCategory(itemChildNode.item(j).getFirstChild().getNodeValue());
                     }else{
@@ -161,6 +150,7 @@ public class GetContentInfo {
     }
 
     public List<BlogContentInfo> getContentInfo() {
+        System.out.println(u.getName());
         HttpClient httpclient = new DefaultHttpClient();
         HttpGet httpgets = new HttpGet(url);
         httpgets.setHeader("User-Agent", "Mozilla/5.0 (Windows; U; Windows NT 5.1; zh-CN; rv:1.9.0.3) Gecko/2008092417 Firefox/3.0.3");
