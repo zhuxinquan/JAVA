@@ -21,6 +21,7 @@ public class Main {
                     break;
                 }
             }
+            System.out.println(u.getId() + "/" + users.size());
         }
         BlogContentCrud.storeBlogContentCollection(blogContentInfos);
     }

@@ -25,11 +25,12 @@ public class GetGroupUsers {
             User user = null;
             while(rs.next()){
                 user = new User();
+                user.setId(rs.getInt("Id"));
                 user.setName(rs.getString("Name"));
                 user.setBlogAddress(rs.getString("BlogAddress"));
                 user.setBlogType(rs.getString("BlogType"));
                 user.setGrade(rs.getString("Grade"));
-                user.setUpdateTime(rs.getString("UpdateTime"));
+                user.setUpdateTime(rs.getLong("UpdateTime"));
                 collection.add(user);
             }
         } catch (SQLException e) {
@@ -38,7 +39,6 @@ public class GetGroupUsers {
             DBUtils.close(rs, stml, conn);
 
         }
-        System.out.println(collection.toString());
         return collection;
     }
 }

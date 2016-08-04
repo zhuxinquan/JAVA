@@ -1,16 +1,16 @@
 package com.get_blog_content;
 
-
 /**
  * 博文内容
  * Created by zhuxinquan on 16-4-14.
  */
 public class BlogContentInfo {
-    private String BlogAddress;
+    private int id;
+    private int uid;
     private String BlogArticleLink;
     private String Title;
     private String Author;
-    private String PubDate;
+    private Long PubDate;
     private String ArticleDetail;
     private String Summary;
     private String Category;
@@ -27,12 +27,28 @@ public class BlogContentInfo {
         return BlogArticleLink.equals(((BlogContentInfo) obj).BlogArticleLink);
     }
 
-    public String getBlogAddress() {
-        return BlogAddress;
+    public int getId() {
+        return id;
     }
 
-    public void setBlogAddress(String blogAddress) {
-        BlogAddress = blogAddress;
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public int getUid() {
+        return uid;
+    }
+
+    public void setUid(int uid) {
+        this.uid = uid;
+    }
+
+    public Long getPubDate() {
+        return PubDate;
+    }
+
+    public void setPubDate(Long pubDate) {
+        PubDate = pubDate;
     }
 
     public String getBlogArticleLink() {
@@ -57,14 +73,6 @@ public class BlogContentInfo {
 
     public void setAuthor(String author) {
         Author = author;
-    }
-
-    public String getPubDate() {
-        return PubDate;
-    }
-
-    public void setPubDate(String pubDate) {
-        PubDate = pubDate;
     }
 
     public String getArticleDetail() {
@@ -93,12 +101,13 @@ public class BlogContentInfo {
 
     @Override
     public String toString() {
-        return "Blog{" +
-                "BlogAddress='" + BlogAddress + '\'' +
+        return "BlogContentInfo{" +
+                "id=" + id +
+                ", uid=" + uid +
                 ", BlogArticleLink='" + BlogArticleLink + '\'' +
                 ", Title='" + Title + '\'' +
                 ", Author='" + Author + '\'' +
-                ", PubDate='" + PubDate + '\'' +
+                ", PubDate=" + PubDate +
                 ", ArticleDetail='" + ArticleDetail + '\'' +
                 ", Summary='" + Summary + '\'' +
                 ", Category='" + Category + '\'' +

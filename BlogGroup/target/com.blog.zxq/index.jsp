@@ -1,256 +1,361 @@
+<%@ page import="java.sql.Connection" %>
+<%@ page import="com.get_blog_content.DBUtils" %>
+<%@ page import="java.sql.PreparedStatement" %>
+<%@ page import="java.sql.ResultSet" %>
+<%@ page import="com.get_blog_content.Time" %>
+<%@ page import="java.util.*" %>
+<%@ page import="com.get_blog_content.BlogContentCrud" %>
+<%@ page contentType="text/html; charset=UTF-8" language="java" %>
+
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome</title>
+    <title>Xiyou Linux Group博客系统</title>
     <meta charset="utf-8">
+    <meta name="viewport"  content="width=device-width, initial-scale=1"/>
+    <script type="text/javascript" src="./js/tagcloud.js"></script>
+    <script type="text/javascript" src="./js/jquery-1.11.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./css/index.css">
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('.inactive').click(function(){
+                if($(this).siblings('ul').css('display')=='none'){
+                    $(this).parent('li').siblings('li').removeClass('inactives');
+                    $(this).addClass('inactives');
+                    $(this).siblings('ul').slideDown(500).children('li');
+                    $(this).parents('li').siblings('li').children('ul').css('display','none');
+
+                }else{
+                    //控制自身变成+号
+                    $(this).removeClass('inactives');
+                    //控制自身菜单下子菜单隐藏
+                    $(this).siblings('ul').slideUp(200);
+                    //控制自身子菜单变成+号
+                    $(this).siblings('ul').children('li').children('ul').parent('li').children('a').addClass('inactives');
+                    //控制自身菜单下子菜单隐藏
+                    $(this).siblings('ul').children('li').children('ul').slideUp(200);
+
+                    //控制同级菜单只保持一个是展开的（-号显示）
+                    $(this).siblings('ul').children('li').children('a').removeClass('inactives');
+                }
+            })
+        });
+    </script>
 </head>
 <body>
-
-<p>上一篇简单介绍了dom解析xml文件的用法，但是dom解析有一个缺点，就是dom解析前需要将xml文件一次性的读入内存当中，而SAX解析则解决了这个问题。</p>
-
-
-
-<h3 id="sax是simple-api-for-xml的简写既是一种接口也是一种软件包">SAX：是Simple API for XML的简写，既是一种接口，也是一种软件包。</h3>
-
-<p>SAX是一种XML解析的替代方法。SAX不同于DOM解析，它逐行扫描文档，一边扫描一边解析，所以它内存占用少，对于大型文档的解析是个很好的优势。</p>
-
-
-
-<h4 id="首先是解析的步骤">首先是解析的步骤：</h4>
-
-<ol>
-    <li>创建SAX解析器工厂对象； SAXParseFactory spf = SAXParserFactory.newInstance();</li>
-    <li>使用解析器工厂创建解析器实例；SAXParse saxParser = spf.newSAXParser();</li>
-    <li>创建xml内容解析器对象；PersonHandler ph = new PersonHandler(); <br>
-        <ol><li>开始解析文档调用的方法</li>
-            <li>结束解析文档调用的方法</li>
-            <li>解析开始元素调用的方法</li>
-            <li>解析结束元素调用的方法</li>
-            <li>解析文本内容调用的方法</li></ol></li>
-    <li>创建xml文件输入流，开始解析xml文件：</li>
-</ol>
-
-<p>SAX是从上往下依次解析xml文档的，所以解析的过程并不具备层次性，从输入流开始的地方解析，根据解析到的不同的元素、内容回调合适的方法进行解析，下面是一个以teacher.xml文件为例的解析实例， 将从xml文件中解析出来的teacher的id、name以及desc存入一个Teacher对象中，病输出：</p>
-
-
-
-<h4 id="teacherxml文件如下"><strong>teacher.xml文件如下：</strong></h4>
-
-
-
-<pre class="prettyprint"><code class=" hljs xml"><span class="hljs-pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">person</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">teacher</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"1"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">name</span>&gt;</span>小白<span class="hljs-tag">&lt;/<span class="hljs-title">name</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">desc</span>&gt;</span>小白人<span class="hljs-tag">&lt;/<span class="hljs-title">desc</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">teacher</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">teacher</span> <span class="hljs-attribute">id</span>=<span class="hljs-value">"2"</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">name</span>&gt;</span>小黑<span class="hljs-tag">&lt;/<span class="hljs-title">name</span>&gt;</span>
-    <span class="hljs-tag">&lt;<span class="hljs-title">desc</span>&gt;</span>小黑人<span class="hljs-tag">&lt;/<span class="hljs-title">desc</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">teacher</span>&gt;</span>
-    <span class="hljs-tag">&lt;/<span class="hljs-title">person</span>&gt;</span></code></pre>
-
-
-
-<h4 id="要存入的teacher类定义如下">要存入的Teacher类定义如下：</h4>
-
-
-
-<pre class="prettyprint"><code class=" hljs java"><span class="hljs-keyword">package</span> xml;
-<span class="hljs-javadoc">/**
- * Created by zhuxinquan on 16-1-20.
- */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">Teacher</span> {</span>
-    <span class="hljs-keyword">private</span> <span class="hljs-keyword">int</span> id;
-    <span class="hljs-keyword">private</span> String name;
-    <span class="hljs-keyword">private</span> String desc;
-
-    <span class="hljs-annotation">@Override</span>
-    <span class="hljs-keyword">public</span> String <span class="hljs-title">toString</span>() {
-    <span class="hljs-keyword">return</span> <span class="hljs-string">"Teacher{"</span> +
-    <span class="hljs-string">"id="</span> + id +
-    <span class="hljs-string">", name='"</span> + name + <span class="hljs-string">'\''</span> +
-    <span class="hljs-string">", desc='"</span> + desc + <span class="hljs-string">'\''</span> +
-    <span class="hljs-string">'}'</span>;
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-title">Teacher</span>() {
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-title">Teacher</span>(<span class="hljs-keyword">int</span> id, String name, String desc) {
-
-    <span class="hljs-keyword">this</span>.id = id;
-    <span class="hljs-keyword">this</span>.name = name;
-    <span class="hljs-keyword">this</span>.desc = desc;
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">int</span> <span class="hljs-title">getId</span>() {
-
-    <span class="hljs-keyword">return</span> id;
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setId</span>(<span class="hljs-keyword">int</span> id) {
-    <span class="hljs-keyword">this</span>.id = id;
-    }
-
-    <span class="hljs-keyword">public</span> String <span class="hljs-title">getName</span>() {
-    <span class="hljs-keyword">return</span> name;
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setName</span>(String name) {
-    <span class="hljs-keyword">this</span>.name = name;
-    }
-
-    <span class="hljs-keyword">public</span> String <span class="hljs-title">getDesc</span>() {
-    <span class="hljs-keyword">return</span> desc;
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setDesc</span>(String desc) {
-    <span class="hljs-keyword">this</span>.desc = desc;
-    }
-    }</code></pre>
-
-
-
-<h4 id="下面是sax解析xml文件的源代码">下面是SAX解析xml文件的源代码：</h4>
-
-
-
-<pre class="prettyprint"><code class=" hljs java"><span class="hljs-keyword">package</span> xml;
-
-    <span class="hljs-keyword">import</span> org.xml.sax.InputSource;
-    <span class="hljs-keyword">import</span> org.xml.sax.SAXException;
-
-    <span class="hljs-keyword">import</span> javax.xml.parsers.ParserConfigurationException;
-    <span class="hljs-keyword">import</span> javax.xml.parsers.SAXParser;
-    <span class="hljs-keyword">import</span> javax.xml.parsers.SAXParserFactory;
-    <span class="hljs-keyword">import</span> java.io.FileInputStream;
-    <span class="hljs-keyword">import</span> java.io.FileNotFoundException;
-    <span class="hljs-keyword">import</span> java.io.IOException;
-    <span class="hljs-keyword">import</span> java.io.InputStream;
-    <span class="hljs-keyword">import</span> java.util.List;
-
-<span class="hljs-javadoc">/**
- * Created by zhuxinquan on 16-1-22.
- */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">SaxParseDemo</span> {</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">static</span> <span class="hljs-keyword">void</span> <span class="hljs-title">main</span>(String[] args) <span class="hljs-keyword">throws</span> ParserConfigurationException, SAXException, IOException {
-    <span class="hljs-comment">//创建SAX解析器工厂</span>
-    SAXParserFactory factory = SAXParserFactory.newInstance();
-    <span class="hljs-comment">//根据工厂创建解析器对象</span>
-    SAXParser sax = factory.newSAXParser();
-
-    PersonHandler ph = <span class="hljs-keyword">new</span> PersonHandler();
-    <span class="hljs-comment">//开始解析</span>
-    sax.parse((InputStream) <span class="hljs-keyword">new</span> FileInputStream(<span class="hljs-string">"teacher.xml"</span>), ph);
-    List&lt;Teacher&gt; list = ph.getTeachers();
-    System.out.println(list);
-    }
-    }</code></pre>
-
-
-
-<h4 id="如同上面介绍的步骤一样该文件主要定义解析器工厂解析器对象以及声明内容解析对象xml文件的主要解析在与定义的内容解析内容如下">如同上面介绍的步骤一样，该文件主要定义解析器工厂、解析器对象以及声明内容解析对象，xml文件的主要解析在与定义的内容解析内容，如下：</h4>
-
-
-
-<pre class="prettyprint"><code class=" hljs java"><span class="hljs-keyword">package</span> xml;
-
-    <span class="hljs-keyword">import</span> org.xml.sax.Attributes;
-    <span class="hljs-keyword">import</span> org.xml.sax.SAXException;
-    <span class="hljs-keyword">import</span> org.xml.sax.helpers.DefaultHandler;
-
-    <span class="hljs-keyword">import</span> java.util.ArrayList;
-    <span class="hljs-keyword">import</span> java.util.List;
-
-<span class="hljs-javadoc">/**
- * SAX解析的内容处理器
- * 进行回调使用
- * Created by zhuxinquan on 16-1-22.
- */</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-class"><span class="hljs-keyword">class</span> <span class="hljs-title">PersonHandler</span> <span class="hljs-keyword">extends</span> <span class="hljs-title">DefaultHandler</span> {</span>
-
-    <span class="hljs-keyword">private</span> List&lt;Teacher&gt; teachers = <span class="hljs-keyword">null</span>;
-    <span class="hljs-keyword">private</span> Teacher teacher;
-    <span class="hljs-keyword">private</span> String tag;
-
-
-    <span class="hljs-comment">//开始解析文档时调用的方法</span>
-
-    <span class="hljs-keyword">public</span> List&lt;Teacher&gt; <span class="hljs-title">getTeachers</span>() {
-    <span class="hljs-keyword">return</span> teachers;
-    }
-
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">setTeachers</span>(List&lt;Teacher&gt; teachers) {
-    <span class="hljs-keyword">this</span>.teachers = teachers;
-    }
-
-    <span class="hljs-annotation">@Override</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">startDocument</span>() <span class="hljs-keyword">throws</span> SAXException {
-    teachers = <span class="hljs-keyword">new</span> ArrayList&lt;Teacher&gt;();
-    }
-
-
-    <span class="hljs-javadoc">/**
-     * 解析开始标签时调用的方法
-     *<span class="hljs-javadoctag"> @param</span> uri:命名空间
-     *<span class="hljs-javadoctag"> @param</span> localName：元素的本地名称，即元素名（标签名），不带前缀
-     *<span class="hljs-javadoctag"> @param</span> qName：带前缀的元素名称
-     *<span class="hljs-javadoctag"> @param</span> attributes：存储标签元素的属性
-     *<span class="hljs-javadoctag"> @throws</span> SAXException
-     */</span>
-    <span class="hljs-annotation">@Override</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">startElement</span>(String uri, String localName, String qName, Attributes attributes) <span class="hljs-keyword">throws</span> SAXException {
-    <span class="hljs-keyword">if</span>(<span class="hljs-string">"teacher"</span>.equals(qName)){
-    teacher = <span class="hljs-keyword">new</span> Teacher();
-    <span class="hljs-comment">//取出属性并添加到teacher中</span>
-    teacher.setId(Integer.parseInt(attributes.getValue(<span class="hljs-string">"id"</span>)));
-    }
-    tag = qName;
-    }
-
-    <span class="hljs-comment">//解析结束标签时调用的方法</span>
-    <span class="hljs-annotation">@Override</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">endElement</span>(String uri, String localName, String qName) <span class="hljs-keyword">throws</span> SAXException {
-    <span class="hljs-keyword">if</span>(<span class="hljs-string">"teacher"</span>.equals(qName)){
-    teachers.add(teacher);
-    }
-    tag = <span class="hljs-keyword">null</span>;
-    }
-
-    <span class="hljs-comment">//xml文档解析完成调用的方法</span>
-    <span class="hljs-annotation">@Override</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">endDocument</span>() <span class="hljs-keyword">throws</span> SAXException {
-    System.out.println(<span class="hljs-string">"XML解析完毕！"</span>);
-    }
-
-    <span class="hljs-comment">//解析文本内容时调用的方法</span>
-    <span class="hljs-annotation">@Override</span>
-    <span class="hljs-keyword">public</span> <span class="hljs-keyword">void</span> <span class="hljs-title">characters</span>(<span class="hljs-keyword">char</span>[] ch, <span class="hljs-keyword">int</span> start, <span class="hljs-keyword">int</span> length) <span class="hljs-keyword">throws</span> SAXException {
-    <span class="hljs-keyword">if</span>(tag != <span class="hljs-keyword">null</span>){
-    <span class="hljs-comment">//取出属性并添加到teacher中</span>
-    <span class="hljs-keyword">if</span>(<span class="hljs-string">"name"</span>.equals(tag)){
-    teacher.setName(<span class="hljs-keyword">new</span> String(ch, start, length));
-    }<span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(<span class="hljs-string">"desc"</span>.equals(tag)){
-    teacher.setDesc(<span class="hljs-keyword">new</span> String(ch, start, length));
-    }
-    }
-    }
-    }</code></pre>
-
-
-
-<h4 id="sax解析的内容处理器一般继承defaulthandler类该类中包含了处理xml文档的元素以及文本的许多处理方法在实际应用中需要使用什么方法时再去实现它">SAX解析的内容处理器一般继承DefaultHandler类，该类中包含了处理xml文档的元素以及文本的许多处理方法，在实际应用中需要使用什么方法时，再去实现它。</h4>
-
-
-
-<h4 id="上面几个源代码可以在这里找到">上面几个源代码可以在<a href="https://github.com/zhuxinquan/JAVA/tree/master/XMLExercise" target="&quot;_blank">这里找到</a>;</h4>
-
-<h5 id="初次学习错误之处还望指正">！！初次学习，错误之处还望指正～～～</h5>
-<div>
-    作者：zhuxinquan61 发表于2016/1/22 16:54:19 <a href="http://blog.csdn.net/zhuxinquan61/article/details/50562312">原文链接</a>
+<%
+    Connection conn = DBUtils.getConnection();
+    Connection conn1 = DBUtils.getConnection();
+    PreparedStatement ps = null;
+    PreparedStatement ps1 = null;
+    ResultSet rs = null;
+    ResultSet rs1 = null;
+%>
+<div class="all">
+    <header id="header">
+        <hgroup>
+            <div id="nave">
+                <div id="nave1">
+                    <div id="pictures">
+                        <img src="http://7xs8o3.com1.z0.glb.clouddn.com/sign1.png" height="100px" width="100px"></div>
+						<span id="nsize">
+							<h2>Xiyou Linux Group群博</h2>
+							<h4>open,free,share</h4>
+						</span>
+                </div>
+                <div id="seart">
+                    <table>
+                        <tbody>
+                        <tr>
+                            <td>
+                                <a href="index.jsp"><span class="tlb">返回首页</span></a>
+                                <span>|</span>
+                                <a href="https://www.xiyoulinux.org" target="_blank"><span class="tlb">官网链接</span></a>
+                                <span>|</span>
+                                <a href="http://cs.xiyoulinux.org" target="_blank"><span class="tlb">CS平台登陆</span></a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <form action="search.jsp" method="post">
+                        <label>
+                            <input type="text" name="search">
+                        </label>
+                        <button class="btn" type="submit">搜索</button>
+                    </form>
+                </div>
+            </div>
+        </hgroup>
+        <nav></nav>
+    </header>
+    <article id="article">
+        <div id="laside">
+            <aside>
+                <div class="list">
+                    <ul class="yiji">
+                        <li>
+                            <span style="font-size: 15px; padding-left: 10px; color: #808080; display: block; font-weight: bold; height: 40px; line-height:36px; position: relative">年级分类</span>
+                            <%--<a href="" style="font-size: 15px;">年级分类</a>--%>
+                        </li>
+                            <%
+                                String queryGrades = "select DISTINCT Grade from T_user order by Grade";
+                                ps = conn.prepareStatement(queryGrades);
+                                rs = ps.executeQuery();
+                                List<String> grades = new ArrayList<>();
+                                while(rs.next()){
+                                    grades.add(rs.getString("Grade"));
+                                }
+                                for(String s : grades){
+                                    if(s == null){
+                                        continue;
+                                    }
+                            %>
+                        <li>
+                            <span class="inactive" style="font-size: 14px; padding-left: 10px; color: #808080; display: block; font-weight: bold; height: 40px; line-height:36px; position: relative"><%= s %>级</span>
+                                <ul style="display: none">
+                                    <%
+                                        String queryPeopleByGrade = "select * from T_user where Grade = " + s;
+                                        ps = conn.prepareStatement(queryPeopleByGrade);
+                                        rs = ps.executeQuery();
+                                        while(rs.next()){
+                                    %>
+                                    <li class="last">
+                                        <img  src="http://q.qlogo.cn/headimg_dl?dst_uin=<%= rs.getString("QQ") %>&spec=100&img_type=jpg" class="picture">
+                                        <span><a href="index.jsp?uid=<%= rs.getInt("Id") %>"><%= rs.getString("Name") %></a></span>
+                                    </li>
+                                    <%
+                                        }
+                                    %>
+                                </ul>
+                        </li>
+                        <%
+                            }
+                        %>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+        <section>
+            <div id="bbox">
+                <%
+                    String queryBlog = "select T_blog.Id, uid, Title, PubDate, ArticleDetail, Summary, Name from T_blog, T_user where T_user.Id = T_blog.uid ";
+                    String pageNum = "1";
+                    String condition = "";
+                    String condition1 = "";
+                    String uid = request.getParameter("uid");
+                    String time = request.getParameter("time");
+                    String category = request.getParameter("category");
+                    if(uid != null){
+                        condition = condition + "uid=" + uid + "&";
+                        condition1 = condition1 + " uid = " + uid + " ";
+                        queryBlog = queryBlog + " and uid = " + uid + " ";
+                    }
+                    if(time != null){
+                        condition = condition + "time=" + time + "&";
+                        Set<Integer> big = new HashSet<>();
+                        big.add(0);
+                        big.add(2);
+                        big.add(4);
+                        big.add(6);
+                        big.add(7);
+                        big.add(9);
+                        big.add(11);
+                        int year = Integer.parseInt(time.substring(0, 4));
+                        int month = Integer.parseInt(time.substring(5, time.length())) - 1;
+                        int days = 0;
+                        if(month == 1){
+                            if(year % 4 == 0 && year % 100 != 0 || year % 400 == 0){
+                                days = 29;
+                            }else{
+                                days = 28;
+                            }
+                        }else if(big.contains(month)){
+                            days = 31;
+                        }else{
+                            days = 30;
+                        }
+                        Long time1 = new Date(year, month, 1, 0, 0, 0).getTime();
+                        Long time2 = new Date(year, month, days, 23, 59, 59).getTime();
+                        condition1 = condition1 + " PubDate between " + time1 + " and " + time2 + " ";
+                        queryBlog = queryBlog + " and PubDate between " + time1 + " and " + time2 + " ";
+                    }
+                    if(category != null){
+                        String s = "'%" + category + "%'";
+                        condition = condition + "category=" + category + "&";
+                        condition1 = condition1 + " category like " + s + " ";
+                        queryBlog = queryBlog + " and category like " + s + " ";
+                    }
+                    if(request.getParameter("page") != null){
+                        pageNum = request.getParameter("page");
+                    }
+                    queryBlog = queryBlog + " order by PubDate desc limit " + String.valueOf((Integer.parseInt(pageNum) - 1) * 10) + ", 10 ";
+                    System.out.println(queryBlog);
+                    ps = conn.prepareStatement(queryBlog);
+                    rs = ps.executeQuery();
+                    while(rs.next()){
+                %>
+                <div class="vbox">
+                    <div>
+                        <p class="fsize">
+                            <a  target="_blank" href="detail.jsp?id=<%= rs.getInt("Id") %>" title="<%= rs.getString("Title") %>"><%= rs.getString("Title") %></a>
+                        </p>
+                    </div>
+                    <div style="text-indent:3em;">
+							<span class="node">
+								<%
+                                    if(rs.getString("Summary") == null){
+                                        String Summary = rs.getString("ArticleDetail");
+                                        int len = Summary.length();
+                                        if(len > 300){
+                                            Summary = Summary.substring(0, 300);
+                                        }else{
+                                            Summary = Summary.substring(0, len);
+                                        }
+                                %>
+                                <![CDATA[<%= Summary %>]]>
+                                <%
+                                    }else{
+                                %>
+                                <%= rs.getString("Summary") %>
+                                <%
+                                    }
+                                %>
+							</span>
+							<span>
+								<a href="detail.jsp?id=<%= rs.getInt("Id") %>" rel="nofollow" class="more-link">继续阅读 >></a>
+							</span>
+                    </div>
+                    <br/>
+                    <br/>
+                    <div>
+                        <a href="index.jsp?uid=<%= rs.getInt("Id") %>" class="afont">
+                            <%= rs.getString("Name") %>
+                        </a>
+                        <span class="time">
+                            <%= Time.formatTime(new Date(rs.getLong("PubDate"))) %>
+                        </span>
+                    </div>
+                </div>
+                <%
+                    }
+                %>
+            </div>
+        </section>
+        <div id="pagenum" class="pagenum">
+            <%
+                String sql = null;
+                if(condition1.trim().length() == 0){
+                    sql = "select count(Id) num from T_blog";
+                }else{
+                    sql = "select count(Id) num from T_blog where " + condition1;
+                }
+
+                ps = conn.prepareStatement(sql);
+                rs = ps.executeQuery();
+                int count = 0;
+                int t = 0;
+                int list = 1;
+                if(request.getParameter("page") != null){
+                    list = Integer.parseInt(request.getParameter("page"));
+                }
+                if(rs.next()){
+                    count = rs.getInt("num")/10;
+                    if(rs.getInt("num")%10 != 0){
+                        count++;
+                    }
+                }
+
+                if(list != 1){
+            %>
+            <a href="index.jsp?<%= condition %>page=1">首页</a>
+            <a href="index.jsp?<%= condition %>page=<%= list - 1 %>">上一页</a>
+            <%
+                }
+                if(list >= 5){
+            %>
+            <a href="index.jsp?<%= condition %>page=<%= (list / 5 - 1) * 5 + 1 %>">[…]</a>
+            <%
+                }
+                for(int i = (list - 1) / 5 * 5 + 1; i <= list / 5 * 5 + 5 && i <= count; i++){
+                    if(i == list){
+            %>
+            <strong style="color:blue;"><%= i %></strong>
+            <%
+                    }else{
+            %>
+            <a href="index.jsp?<%= condition %>page=<%= i %>"><%= i %></a>
+            <%
+                    }
+                }
+                if((list - 1) / 5 * 5 + 1 != (count - 1) / 5 * 5 + 1){
+            %>
+            <a href="index.jsp?<%= condition %>page=<%= (list + 4) / 5 * 5 + 1 %>">[…]</a>
+            <%
+                }
+                if(list != count && count != 0){
+            %>
+            <a href="index.jsp?<%= condition %>page=<%= list + 1 %>">下一页</a>
+            <a href="index.jsp?<%= condition %>page=<%= count %>">尾页</a>
+            <%
+                }
+             %>
+        </div>
+        <div>
+            <aside id="raside">
+                <div id="tagsList">
+                    <%
+                        String queryTag = "select category from T_category";
+                        ps = conn.prepareStatement(queryTag);
+                        rs = ps.executeQuery();
+                        while(rs.next()){
+                    %>
+                    <span>
+							<a href="index.jsp?category=<%= rs.getString("category") %>"><%= rs.getString("category") %></a>
+                    </span>
+                    <%
+                        }
+                    %>
+                </div>
+                <div id="rlook">
+                    <span class="ssize">文章归档</span>
+                    <%
+                        Date date = new Date();
+                        int year = date.getYear() + 1900;
+                        int month = date.getMonth() + 1;
+                        for(int i = 0; i < 10; i++){
+                    %>
+                    <p>
+                        <a href="index.jsp?time=<%= year %>,<%= month %>"><%= year %>年<%= month %>月(<%= BlogContentCrud.CountTime(year, month, conn1, ps1, rs1) %>)</a>
+                    </p>
+                    <%
+                            month--;
+                            if(month == 0){
+                                year--;
+                                month = 12;
+                            }
+                        }
+                    %>
+                </div>
+            </aside>
+        </div>
+    </article>
+    <footer>
+        <div id="foot">
+            <p>
+                <span>Xiyou Linux Group群博</span>
+            </p>
+            <p>
+                <span>open,free,share</span>
+            </p>
+            <p>
+                <span><a href="http://www.xiyoulinux.org">西邮Linux兴趣小组</a> 版权所有 © 2016</span>
+            </p>
+        </div>
+    </footer>
 </div>
-<div>
-    阅读：52 评论：1 <a href="http://blog.csdn.net/zhuxinquan61/article/details/50562312#comments" target="_blank">查看评论</a>
-</div>
+<%
+    DBUtils.close(rs, ps, conn);
+    DBUtils.close(rs1, ps1, conn1);
+%>
 </body>
 </html>

@@ -4,22 +4,31 @@ package com.get_blog_content;
  * Created by zhuxinquan on 16-7-26.
  */
 public class User {
+    private int id;
     private String Name;
     private String BlogAddress;
     private String BlogType;
     private String Grade;
-    private String UpdateTime;
-
+    private Long UpdateTime;
 
     public User() {
     }
 
-    public User(String name, String blogAddress, String blogType, String grade, String updateTime) {
+    public User(int id, String name, String blogAddress, String blogType, String grade, Long updateTime) {
+        this.id = id;
         Name = name;
         BlogAddress = blogAddress;
         BlogType = blogType;
         Grade = grade;
         UpdateTime = updateTime;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
@@ -54,18 +63,19 @@ public class User {
         Grade = grade;
     }
 
-    public String getUpdateTime() {
+    public Long getUpdateTime() {
         return UpdateTime;
     }
 
-    public void setUpdateTime(String updateTime) {
+    public void setUpdateTime(Long updateTime) {
         UpdateTime = updateTime;
     }
 
     @Override
     public String toString() {
         return "User{" +
-                "Name='" + Name + '\'' +
+                "id=" + id +
+                ", Name='" + Name + '\'' +
                 ", BlogAddress='" + BlogAddress + '\'' +
                 ", BlogType='" + BlogType + '\'' +
                 ", Grade='" + Grade + '\'' +
