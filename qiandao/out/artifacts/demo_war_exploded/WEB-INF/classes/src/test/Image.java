@@ -57,7 +57,6 @@ public class Image extends HttpServlet{
             g.setColor(new Color(20+random.nextInt(110),20+random.nextInt(110),20+random.nextInt(110)));
             g.drawString(rand, 13*i+6, 16);
         }
-
         Check_num.check_num = sRand;
 //        req.setAttribute("rand", sRand);
         g.dispose();//释放图片资源
