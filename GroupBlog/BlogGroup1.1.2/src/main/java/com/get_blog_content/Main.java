@@ -22,6 +22,7 @@ public class Main {
                     BufferedOutputStream bos = new BufferedOutputStream(fos, 1024);
                     PrintStream ps = new PrintStream(bos, true);
                     System.setOut(ps);
+                    System.setErr(ps);
                     System.out.println(new Date());
                     Collection<User> users = GetGroupUsers.getGroupusers();
                     Collection<Tag> tags = Tag.getAllTags();
