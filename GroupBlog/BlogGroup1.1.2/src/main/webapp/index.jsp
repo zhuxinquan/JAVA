@@ -6,7 +6,6 @@
 <%@ page import="java.util.*" %>
 <%@ page import="com.get_blog_content.BlogContentCrud" %>
 <%@ page import="java.net.URLEncoder" %>
-<%@ page import="java.net.URL" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 
@@ -28,7 +27,8 @@
         error++;
     }
     if(error != 0){
-        request.getRequestDispatcher("/404.html").forward(request, response);
+        throw new Exception();
+//        request.getRequestDispatcher("/404.html").forward(request, response);
     }
 %>
 
@@ -92,6 +92,9 @@
 							<a href="index.jsp"><h2>Xiyou Linux Group群博</h2></a>
 							<a href="index.jsp"><h4>free open share</h4></a>
 						</span>
+                    <div id="pictures">
+                        <a href="http://www.softwarefreedomday.org"><img src="/image/web-banner-chat-we-re-organizing-h.png" alt="Organizing SFD"/></a>
+                    </div>
                 </div>
                 <div id="seart">
                     <table>
@@ -127,36 +130,36 @@
                             <span style="font-size: 15px; padding-left: 10px; color: #808080; display: block; font-weight: bold; height: 40px; line-height:36px; position: relative">年级分类</span>
                             <%--<a href="" style="font-size: 15px;">年级分类</a>--%>
                         </li>
-                            <%
-                                String queryGrades = "select DISTINCT Grade from T_user order by Grade";
-                                ps = conn.prepareStatement(queryGrades);
-                                rs = ps.executeQuery();
-                                List<String> grades = new ArrayList<>();
-                                while(rs.next()){
-                                    grades.add(rs.getString("Grade"));
+                        <%
+                            String queryGrades = "select DISTINCT Grade from T_user order by Grade";
+                            ps = conn.prepareStatement(queryGrades);
+                            rs = ps.executeQuery();
+                            List<String> grades = new ArrayList<>();
+                            while(rs.next()){
+                                grades.add(rs.getString("Grade"));
+                            }
+                            for(String s : grades){
+                                if(s == null){
+                                    continue;
                                 }
-                                for(String s : grades){
-                                    if(s == null){
-                                        continue;
-                                    }
-                            %>
+                        %>
                         <li>
                             <span class="inactive" style="font-size: 14px; padding-left: 10px; color: #808080; display: block; font-weight: bold; height: 40px; line-height:36px; position: relative"><%= s %>级</span>
-                                <ul style="display: none">
-                                    <%
-                                        String queryPeopleByGrade = "select * from T_user where Grade = " + s;
-                                        ps = conn.prepareStatement(queryPeopleByGrade);
-                                        rs = ps.executeQuery();
-                                        while(rs.next()){
-                                    %>
-                                    <li class="last">
-                                        <img  src="http://q.qlogo.cn/headimg_dl?dst_uin=<%= rs.getString("QQ") %>&spec=100&img_type=jpg" class="picture">
-                                        <span><a href="index.jsp?uid=<%= rs.getInt("Id") %>"><%= rs.getString("Name") %></a></span>
-                                    </li>
-                                    <%
-                                        }
-                                    %>
-                                </ul>
+                            <ul style="display: none">
+                                <%
+                                    String queryPeopleByGrade = "select * from T_user where Grade = " + s;
+                                    ps = conn.prepareStatement(queryPeopleByGrade);
+                                    rs = ps.executeQuery();
+                                    while(rs.next()){
+                                %>
+                                <li class="last">
+                                    <img  src="http://q.qlogo.cn/headimg_dl?dst_uin=<%= rs.getString("QQ") %>&spec=100&img_type=jpg" class="picture">
+                                    <span><a href="index.jsp?uid=<%= rs.getInt("Id") %>"><%= rs.getString("Name") %></a></span>
+                                </li>
+                                <%
+                                    }
+                                %>
+                            </ul>
                         </li>
                         <%
                             }
@@ -168,7 +171,7 @@
         <section>
             <div id="bbox">
                 <%
-//                    ArrayList<String> errors = new ArrayList<>();
+                    //                    ArrayList<String> errors = new ArrayList<>();
                     String queryBlog = "select T_blog.Id, uid, Title, PubDate, ArticleDetail, Summary, Name from T_blog, T_user where T_user.Id = T_blog.uid ";
                     String pageNum = "1";
                     String condition = "";
@@ -250,7 +253,7 @@
                                 %>
                                 <![CDATA[<%= Summary %>]]>
                                 <%
-                                    }else{
+                                }else{
                                 %>
                                 <%= rs.getString("Summary") %>
                                 <%
@@ -306,6 +309,10 @@
                     }
                 }
 
+                if(count < list){
+                    throw new Exception();
+                }
+
                 if(list != 1){
             %>
             <a href="index.jsp?<%= condition %>page=1">首页</a>
@@ -322,7 +329,7 @@
             %>
             <strong style="color:blue;"><%= i %></strong>
             <%
-                    }else{
+            }else{
             %>
             <a href="index.jsp?<%= condition %>page=<%= i %>"><%= i %></a>
             <%
@@ -339,7 +346,7 @@
             <a href="index.jsp?<%= condition %>page=<%= count %>">尾页</a>
             <%
                 }
-             %>
+            %>
         </div>
         <div>
             <aside id="raside">

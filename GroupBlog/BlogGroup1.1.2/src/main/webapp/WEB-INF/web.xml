@@ -5,7 +5,9 @@
 <web-app>
   <display-name>Xiyou Linux Group 群博</display-name>
 
-  <welcome-file-list>/index.jsp</welcome-file-list>
+  <welcome-file-list>
+    <welcome-file>/index.jsp</welcome-file>
+  </welcome-file-list>
 
   <error-page>
     <error-code>404</error-code>
@@ -15,6 +17,11 @@
   <error-page>
     <error-code>500</error-code>
     <location>/500.html</location>
+  </error-page>
+
+  <error-page>
+    <exception-type>java.lang.Exception</exception-type>
+    <location>/404.html</location>
   </error-page>
 
 

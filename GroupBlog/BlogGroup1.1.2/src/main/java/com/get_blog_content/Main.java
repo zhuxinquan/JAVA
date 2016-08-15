@@ -60,6 +60,6 @@ public class Main {
         calendar.set(year,month,day, 6, 0, 0);
         Date date = calendar.getTime();
         Timer timer = new Timer();
-        timer.schedule(task, date, 1000 * 60 * 60 * 12);
+        timer.schedule(task, date, 1000 * 60 * 60 * 6);
     }
 }

@@ -56,7 +56,7 @@ td{
 }
 
 .node{
-    font-style: italic;
+    font-style: inherit;
     color: #777;
     text-indent:1cm;
 }

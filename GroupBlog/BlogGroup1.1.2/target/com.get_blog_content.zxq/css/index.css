@@ -55,9 +55,13 @@ td{
 }
 
 .node{
-    font-style: italic;
+    font-style: inherit;
     color: #777;
     text-indent:1cm;
+}
+
+.node img{
+    max-width: 100%;
 }
 
 .fsize{
@@ -185,7 +189,6 @@ ul,li{
     font-size: 172%;
 }
 #header h4 {
-    font-style: italic;
     font-weight: normal;
     margin-bottom: 3%;
     margin-top: -0.2%;
