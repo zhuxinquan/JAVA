@@ -1,5 +1,8 @@
 package url;
 
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -18,9 +21,20 @@ public class URLDemo {
             System.out.println("Protocol : " + url.getProtocol());
             System.out.println("Port : " + url.getPort());
 
+            //通过URL打开链接
             URLConnection urlConnection = url.openConnection();
-            urlConnection.getInputStream();
-            
+            BufferedInputStream bis = new BufferedInputStream(urlConnection.getInputStream());
+            BufferedOutputStream bos = new BufferedOutputStream(new FileOutputStream(url.getPath().substring(url.getPath().lastIndexOf("/") + 1)));
+
+            byte[] bytes = new byte[1024 * 10];
+            int len = -1;
+            while((len = bis.read(bytes)) != -1){
+                bos.write(bytes, 0, len);
+                bos.flush();
+            }
+            bos.close();
+            bis.close();
+            System.out.println("success");
         } catch (MalformedURLException e) {
             e.printStackTrace();
         } catch (IOException e) {

@@ -59,8 +59,10 @@ public class GetContentInfo {
             document = builder.parse(inputStream);
         } catch (SAXException e) {
             e.printStackTrace();
+            return blogContentInfos;
         } catch (IOException e) {
             e.printStackTrace();
+            return blogContentInfos;
         }
 
         Element element = document.getDocumentElement();
