@@ -30,6 +30,7 @@
         throw new Exception();
 //        request.getRequestDispatcher("/404.html").forward(request, response);
     }
+
 %>
 
 <!DOCTYPE html>
@@ -230,8 +231,10 @@
                     }catch (Exception e){
                         rs = null;
                     }
-
-                    while(rs != null && rs.next()){
+                    if(rs.next() == false){
+                        System.out.println("null");
+                    }
+                    while(rs != null && (rs.next() != false)){
                 %>
                 <div class="vbox">
                     <div>

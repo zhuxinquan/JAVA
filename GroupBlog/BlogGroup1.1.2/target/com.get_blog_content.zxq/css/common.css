@@ -1,8 +1,3 @@
-@import url("http://static.blog.csdn.net/css/blog_detail.css");
-@import url("http://static.blog.csdn.net/css/blog_code.css");
-@import url("http://static.blog.csdn.net/css/common.css");
-
-
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section { display: block; }
 html {
     background-color: #FFFFFF;
