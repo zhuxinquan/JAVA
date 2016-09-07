@@ -42,7 +42,7 @@ public class GetContentInfo {
     }
 
     /**
-     * 文档解析
+     * 给定一个输入流进行文档解析
      * @param inputStream
      * @return
      */
@@ -83,6 +83,7 @@ public class GetContentInfo {
 //            e.printStackTrace();
 //        }
 //        System.out.println(items.getLength());
+        //对每篇博文进行解析得到博文的内容
         for (int i = 0; i < items.getLength(); i++) {
             //System.out.println("============================================");
             blogContentInfo = new BlogContentInfo();
@@ -152,6 +153,7 @@ public class GetContentInfo {
     }
 
     public List<BlogContentInfo> getContentInfo() {
+        //使用HttpClient取得响应内容
         System.out.println(u.getName());
         HttpClient httpclient = new DefaultHttpClient();
         HttpGet httpgets = new HttpGet(url);
@@ -203,6 +205,7 @@ public class GetContentInfo {
         return doDocumentBuild(inputStream);
     }
 
+    //将输入流转换为字符串
     public static String convertStreamToString(InputStream is) {
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         StringBuilder sb = new StringBuilder();

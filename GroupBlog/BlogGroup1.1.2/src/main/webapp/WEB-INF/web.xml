@@ -35,7 +35,7 @@
 
   <error-page>
     <exception-type>java.lang.Exception</exception-type>
-    <location>/500.html</location>
+    <location>/404.html</location>
   </error-page>
 
 

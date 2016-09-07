@@ -231,10 +231,8 @@
                     }catch (Exception e){
                         rs = null;
                     }
-                    if(rs.next() == false){
-                        System.out.println("null");
-                    }
                     while(rs != null && (rs.next() != false)){
+//                        System.out.println(rs.getString("Title"));
                 %>
                 <div class="vbox">
                     <div>
