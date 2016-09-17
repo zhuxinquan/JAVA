@@ -1,4 +1,4 @@
-package com.zxq.shiyansan;
+package com.zxq.shiyanyi;
 
 /**
  * 三棱柱

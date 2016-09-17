@@ -1,6 +1,7 @@
-package com.zxq.shiyansan;
+package com.zxq.shiyanyi;
 
 /**
+ * 圆类
  * Created by zhuxinquan on 16-4-13.
  */
 public class Circle {
