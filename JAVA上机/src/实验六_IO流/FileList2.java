@@ -1,6 +1,7 @@
 package 实验六_IO流;
 
-import java.io.*;
+import java.io.File;
+
 public class FileList2{
     public static void main(String[] args){
         File dir=new File(".");
