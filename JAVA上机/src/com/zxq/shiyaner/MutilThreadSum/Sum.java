@@ -1,4 +1,4 @@
-package com.zxq.shiyaner;
+package com.zxq.shiyaner.MutilThreadSum;
 
 /**
  * Created by zhuxinquan on 16-9-27.
