@@ -32,4 +32,56 @@
 
 单例模式能保证在一个JVM中，某一个对象只有一个实例存在
 
-在多线程环境下，单例模式的创建有可能导致并非只有单个对象，如果考虑到同步，也并非需要对整个单例模式的方法进行同步，其实只是在第一个
+在多线程环境下，单例模式的创建有可能导致并非只有单个对象，如果考虑到同步，也并非需要对整个单例模式的方法进行同步，其实只是在第一个对象创建的时候进行同步即可，防止多个线程同时创建了第一个对象
+
+在Java指令中创建对象和赋值操作是分开进行的，也就是说instance = new Singleton();语句是分两步执行的。但是JVM并不保证这两个操作的先后顺序，也就是说有可能JVM会为新的Singleton实例分配空间，然后直接赋值给instance成员，然后再去初始化这个Singleton实例。这样就可能出错了，我们以A、B两个线程为例：
+
+a>A、B线程同时进入了第一个if判断
+
+b>A首先进入synchronized块，由于instance为null，所以它执行instance = new Singleton();
+
+c>由于JVM内部的优化机制，JVM先画出了一些分配给Singleton实例的空白内存，并赋值给instance成员（注意此时JVM没有开始初始化这个实例），然后A离开了synchronized块。
+
+d>B进入synchronized块，由于instance此时不是null，因此它马上离开了synchronized块并将结果返回给调用该方法的程序。
+
+e>此时B线程打算使用Singleton实例，却发现它没有被初始化，于是错误发生了。
+
+通过如下使用内部类来维护单例的实现，JVM内部的机制能够保证当一个类被加载的时候，这个类的加载过程是线程互斥的，这样当我们第一次调用getInstance的时候，JVM能够帮我们保证instance只被创建一次，并且会保证把赋值给instance的内存初始化完毕
+
+```
+private static class SingletonFactory{
+    private static class SingletonFactory{           
+        private static Singleton instance = new Singleton();           
+    }           
+    public static Singleton getInstance(){           
+        return SingletonFactory.instance;           
+    }   
+}
+```
+
+上述中有关单例模式的缺点存在于创建类的时候需要同步，所以只要将创建和getInstance()分开，单独同步也可以：
+
+```
+public class SingletonTest {  
+  
+    private static SingletonTest instance = null;  
+  
+    private SingletonTest() {  
+    }  
+  
+    private static synchronized void syncInit() {  
+        if (instance == null) {  
+            instance = new SingletonTest();  
+        }  
+    }  
+  
+    public static SingletonTest getInstance() {  
+        if (instance == null) {  
+            syncInit();  
+        }  
+        return instance;  
+    }  
+} 
+```
+
+##

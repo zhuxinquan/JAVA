@@ -7,19 +7,22 @@ class Mythread extends Thread{
     public synchronized void run(){
         for (int i = 0; i < 100; i++) {
             System.out.println(getName() + " " + flag);
-            if (!flag)
-                try{
+            if (!flag) {
+                System.out.println(getName() + " " + "entry if");
+                try {
                     wait();
-                }catch (InterruptedException e){}
+                } catch (InterruptedException e) {
+                }
+            }
             flag = false;
-            System.out.println(getName() + " " + flag);
             count = count + 1;
             System.out.println(getName()+" count="+count);
+            System.out.println(getName() + " " + flag);
             flag = true;
             notifyAll();
-            try{
-                sleep(20);
-            }catch(InterruptedException e){}
+//            try{
+//                sleep(10);
+//            }catch(InterruptedException e){}
         }
     }
     public Mythread(String name){
@@ -37,12 +40,18 @@ public class Test {
         C.start();
 
         try {
-            A.join();
-            B.join();
-            C.join();
+            Thread.currentThread().sleep(2000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
+//        try {
+//            A.join();
+//            B.join();
+//            C.join();
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
 
         System.out.println("Main thread end.");
     }
