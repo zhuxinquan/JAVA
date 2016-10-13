@@ -16,6 +16,7 @@ import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.*;
 
+import java.net.ConnectException;
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -161,7 +162,9 @@ public class GetContentInfo {
         HttpResponse response = null;
         try {
             response = httpclient.execute(httpgets);
-        } catch (IOException e) {
+        }catch (ConnectException e){    ///////////////////////此处为修改网络超时
+            e.printStackTrace();
+        }catch (IOException e) {
             e.printStackTrace();
         }
         HttpEntity entity = response.getEntity();
