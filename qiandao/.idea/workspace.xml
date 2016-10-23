@@ -29,14 +29,14 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="183" column="29" selection-start-line="183" selection-start-column="29" selection-end-line="183" selection-end-column="29" />
+            <state vertical-scroll-proportion="0.40915594">
+              <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
               <folding>
-                <marker date="1470368753396" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
-                <marker date="1470368753396" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
+                <marker date="1477212223873" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
+                <marker date="1477212223873" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
               </folding>
             </state>
           </provider>
@@ -69,20 +69,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="register.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/register.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="false" />
-                <marker date="1468820978891" expanded="true" signature="2454:2508" placeholder="select id fr..T_person..." />
-                <marker date="1468820978891" expanded="true" signature="4309:4382" placeholder="insert into T_person..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Check_num.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/Check_num.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -108,9 +94,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -120,9 +104,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-              <folding>
-                <element signature="imports" expanded="false" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -133,7 +115,6 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
               <folding>
-                <element signature="imports" expanded="false" />
                 <marker date="1470368753388" expanded="true" signature="3529:3581" placeholder="select * fro..T_person..." />
                 <marker date="1470368753388" expanded="true" signature="4974:5077" placeholder="select uid f..T_finish..." />
                 <marker date="1470368753388" expanded="true" signature="5343:5450" placeholder="insert into T_finish..." />
@@ -144,10 +125,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="sign_in_list.jsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="sign_in_list.jsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/sign_in_list.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.43333334">
+            <state vertical-scroll-proportion="-64.685715">
               <caret line="214" column="14" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
               <folding>
                 <marker date="1468751933979" expanded="true" signature="4131:4252" placeholder="select * fro..T_finish..." />
@@ -203,8 +184,8 @@
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/searchago.jsp" />
         <option value="$PROJECT_DIR$/src/test/Image.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/src/test/login1.java" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
       </list>
     </option>
   </component>
@@ -234,9 +215,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-1" />
-    <option name="y" value="27" />
-    <option name="width" value="1368" />
-    <option name="height" value="742" />
+    <option name="width" value="1442" />
+    <option name="height" value="901" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -282,7 +262,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
+      <pane id="Scope">
+        <subPane subId="Tests" />
+      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -353,10 +335,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope">
-        <subPane subId="Tests" />
-      </pane>
       <pane id="PackagesPane" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -375,14 +355,14 @@
     <property name="GenerateAntBuildDialog.outputFileNameProperty" value="demo" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/web" />
+      <recent name="$PROJECT_DIR$/src/test" />
+      <recent name="$PROJECT_DIR$/web/lib" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/test" />
       <recent name="$PROJECT_DIR$/src" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/test" />
-      <recent name="$PROJECT_DIR$/web" />
-      <recent name="$PROJECT_DIR$/web/lib" />
     </key>
   </component>
   <component name="RunManager" selected="Tomcat Server.tomcat">
@@ -953,11 +933,12 @@
       <workItem from="1470442533776" duration="2584000" />
       <workItem from="1470540675387" duration="633000" />
       <workItem from="1473746364796" duration="1659000" />
+      <workItem from="1477208854683" duration="1447000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="159796000" />
+    <option name="totallyTimeSpent" value="161243000" />
   </component>
   <component name="TodoView" selected-index="2">
     <todo-panel id="selected-file">
@@ -969,11 +950,12 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="27" width="1368" height="742" extended-state="6" />
+    <frame x="-1" y="0" width="1442" height="901" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19451697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923076" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -982,7 +964,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32668713" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1793313" sideWeight="0.49199083" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1791367" sideWeight="0.49199083" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.15806195" sideWeight="0.50800914" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -994,7 +976,6 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.398773" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19451697" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.45561358" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32506528" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1045,7 +1026,9 @@
     </ignored-roots>
   </component>
   <component name="XDebuggerManager">
-    <breakpoint-manager />
+    <breakpoint-manager>
+      <option name="time" value="1" />
+    </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="antWorkspaceConfiguration">
@@ -1053,25 +1036,13 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/register.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="89" column="17" selection-start-line="72" selection-start-column="8" selection-end-line="92" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <marker date="1468820978891" expanded="true" signature="2454:2508" placeholder="select id fr..T_person..." />
-            <marker date="1468820978891" expanded="true" signature="4309:4382" placeholder="insert into T_person..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web/index.jsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1470368753396" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
-            <marker date="1470368753396" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
           </folding>
         </state>
       </provider>
@@ -1088,7 +1059,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="91" column="9" selection-start-line="91" selection-start-column="9" selection-end-line="91" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1468820978891" expanded="true" signature="2454:2508" placeholder="select id fr..T_person..." />
             <marker date="1468820978891" expanded="true" signature="4309:4382" placeholder="insert into T_person..." />
           </folding>
@@ -1121,7 +1091,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="31" column="28" selection-start-line="31" selection-start-column="28" selection-end-line="31" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1468820978891" expanded="true" signature="2454:2508" placeholder="select id fr..T_person..." />
             <marker date="1468820978891" expanded="true" signature="4309:4382" placeholder="insert into T_person..." />
           </folding>
@@ -1133,8 +1102,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1470368753396" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
-            <marker date="1470368753396" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
           </folding>
         </state>
       </provider>
@@ -1172,7 +1141,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="24" selection-start-column="8" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1468820978891" expanded="true" signature="2454:2508" placeholder="select id fr..T_person..." />
             <marker date="1468820978891" expanded="true" signature="4309:4382" placeholder="insert into T_person..." />
           </folding>
@@ -1184,8 +1152,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1470368753396" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
-            <marker date="1470368753396" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
           </folding>
         </state>
       </provider>
@@ -1223,7 +1191,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="24" selection-start-column="8" selection-end-line="25" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1468820978891" expanded="true" signature="2454:2508" placeholder="select id fr..T_person..." />
             <marker date="1468820978891" expanded="true" signature="4309:4382" placeholder="insert into T_person..." />
           </folding>
@@ -1235,8 +1202,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1470368753396" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
-            <marker date="1470368753396" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
           </folding>
         </state>
       </provider>
@@ -1374,7 +1341,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="54" column="37" selection-start-line="54" selection-start-column="37" selection-end-line="54" selection-end-column="37" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1468820978891" expanded="true" signature="2454:2508" placeholder="select id fr..T_person..." />
             <marker date="1468820978891" expanded="true" signature="4309:4382" placeholder="insert into T_person..." />
           </folding>
@@ -1436,20 +1402,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="183" column="29" selection-start-line="183" selection-start-column="29" selection-end-line="183" selection-end-column="29" />
-          <folding>
-            <marker date="1470368753396" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
-            <marker date="1470368753396" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1457,9 +1410,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="42" column="0" selection-start-line="42" selection-start-column="0" selection-end-line="42" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1468,7 +1419,6 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="57" column="28" selection-start-line="57" selection-start-column="28" selection-end-line="57" selection-end-column="28" />
           <folding>
-            <element signature="imports" expanded="false" />
             <marker date="1470368753388" expanded="true" signature="3529:3581" placeholder="select * fro..T_person..." />
             <marker date="1470368753388" expanded="true" signature="4974:5077" placeholder="select uid f..T_finish..." />
             <marker date="1470368753388" expanded="true" signature="5343:5450" placeholder="insert into T_finish..." />
@@ -1480,11 +1430,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/web/sign_in_list.jsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43333334">
+        <state vertical-scroll-proportion="-64.685715">
           <caret line="214" column="14" selection-start-line="214" selection-start-column="14" selection-end-line="214" selection-end-column="14" />
           <folding>
             <marker date="1468751933979" expanded="true" signature="4131:4252" placeholder="select * fro..T_finish..." />
             <marker date="1468751933979" expanded="true" signature="5705:5826" placeholder="select * fro..T_finish..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.40915594">
+          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
+          <folding>
+            <marker date="1477212223873" expanded="true" signature="8125:8246" placeholder="select * fro..T_finish..." />
+            <marker date="1477212223873" expanded="true" signature="9693:9814" placeholder="select * fro..T_finish..." />
           </folding>
         </state>
       </provider>

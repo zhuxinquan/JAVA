@@ -10,6 +10,7 @@
     <link rel="shortcut icon" href="http://7xs8o3.com1.z0.glb.clouddn.com/sign1.png">
     <link rel="Bookmark" href="http://7xs8o3.com1.z0.glb.clouddn.com/sign1.png">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta property="wb:webmaster" content="4b7ce9b7fadc8721" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Xiyou Linux Group Sign In</title>
     <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
