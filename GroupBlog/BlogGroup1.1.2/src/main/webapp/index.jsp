@@ -6,6 +6,9 @@
 <%@ page import="java.util.*" %>
 <%@ page import="com.get_blog_content.BlogContentCrud" %>
 <%@ page import="java.net.URLEncoder" %>
+<%@ page import="com.sun.org.apache.xerces.internal.impl.xpath.regex.Match" %>
+<%@ page import="java.util.regex.Matcher" %>
+<%@ page import="java.util.regex.Pattern" %>
 <%@ page contentType="text/html; charset=UTF-8" language="java" %>
 
 
@@ -242,14 +245,15 @@
 								<%
                                     if(rs.getString("Summary") == null){
                                         String Summary = rs.getString("ArticleDetail");
+                                        Summary = Summary.replaceAll("<[^>]+?>", "");
                                         int len = Summary.length();
-                                        if(len > 300){
-                                            Summary = Summary.substring(0, 300);
+                                        if(len > 500){
+                                            Summary = Summary.substring(0, 500);
                                         }else{
                                             Summary = Summary.substring(0, len);
                                         }
                                 %>
-                                <![CDATA[<%= Summary %>]]>
+                                <%= Summary %>
                                 <%
                                 }else{
                                 %>
@@ -406,6 +410,6 @@
     DBUtils.close(rs, ps, conn);
     DBUtils.close(rs1, ps1, conn1);
 %>
-<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1260603825'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260603825' type='text/javascript'%3E%3C/script%3E"));</script>
+<script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260603825'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260603825%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));</script>
 </body>
 </html>

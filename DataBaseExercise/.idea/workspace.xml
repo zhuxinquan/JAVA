@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="JdbcDemo.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="JdbcDemo.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/JdbcConnect/JdbcDemo.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="93" />
+            <state vertical-scroll-proportion="0.6321526">
+              <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
               <folding>
                 <marker date="1454539491627" expanded="true" signature="707:746" placeholder="update perso..." />
                 <marker date="1454539491627" expanded="true" signature="1420:1486" placeholder="insert into person..." />
@@ -40,10 +40,10 @@
         <entry file="file://$PROJECT_DIR$/src/JdbcConnect/JdbaQueryDemo.java">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
-              <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
-                <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-                <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+                <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+                <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
               </folding>
             </state>
           </provider>
@@ -72,10 +72,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestDBUtils.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="TestDBUtils.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/JdbcConnect/TestDBUtils.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.57493186">
+            <state vertical-scroll-proportion="0.0">
               <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
               <folding>
                 <marker date="1457144629100" expanded="true" signature="399:437" placeholder="select * fro..movie_data..." />
@@ -126,11 +126,11 @@
         <option value="$PROJECT_DIR$/src/JdbcConnect/JdbcDemo.java" />
         <option value="$PROJECT_DIR$/src/JdbcConnect/Person.java" />
         <option value="$PROJECT_DIR$/src/JdbcConnect/PreparedStatementDemo.java" />
-        <option value="$PROJECT_DIR$/src/JdbcConnect/JdbaQueryDemo.java" />
         <option value="$PROJECT_DIR$/src/JdbcConnect/TestDBUtils.java" />
         <option value="$PROJECT_DIR$/src/JdbcConnect/DBUtils.java" />
         <option value="$PROJECT_DIR$/src/JdbcConnect/db-config.properties" />
         <option value="$PROJECT_DIR$/src/JdbcConnect/JdbcTransaction.java" />
+        <option value="$PROJECT_DIR$/src/JdbcConnect/JdbaQueryDemo.java" />
       </list>
     </option>
   </component>
@@ -140,7 +140,7 @@
     <detection-done>true</detection-done>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1365" />
+    <option name="x" value="-1" />
     <option name="width" value="1442" />
     <option name="height" value="901" />
   </component>
@@ -175,6 +175,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -235,7 +236,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="PackagesPane" />
     </panes>
@@ -250,7 +250,7 @@
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
-  <component name="RunManager" selected="Application.TestDBUtils">
+  <component name="RunManager" selected="Application.JdbaQueryDemo">
     <configuration default="false" name="JdbcDemo" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -725,6 +725,19 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
+      <setting name="environment" value="" />
+      <setting name="specsToExecute" value="" />
+      <setting name="tags" value="" />
+      <setting name="parallelNodes" value="" />
+      <setting name="execInParallel" value="false" />
+      <setting name="programParameters" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="moduleName" value="" />
+      <envMap />
+      <setting name="rowsRange" value="" />
+      <method />
+    </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
       <node-options />
       <gulpfile />
@@ -754,9 +767,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.TestDBUtils" />
-        <item index="1" class="java.lang.String" itemvalue="Application.JdbcTransaction" />
-        <item index="2" class="java.lang.String" itemvalue="Application.JdbaQueryDemo" />
+        <item index="0" class="java.lang.String" itemvalue="Application.JdbaQueryDemo" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestDBUtils" />
+        <item index="2" class="java.lang.String" itemvalue="Application.JdbcTransaction" />
         <item index="3" class="java.lang.String" itemvalue="Application.PreparedStatementDemo" />
         <item index="4" class="java.lang.String" itemvalue="Application.JdbcDemo" />
       </list>
@@ -832,15 +845,18 @@
       <workItem from="1466002562486" duration="498000" />
       <workItem from="1466162608842" duration="818000" />
       <workItem from="1469454023552" duration="482000" />
+      <workItem from="1477448031124" duration="1336000" />
+      <workItem from="1477574950261" duration="85000" />
+      <workItem from="1477837074802" duration="7000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39720000" />
+    <option name="totallyTimeSpent" value="41148000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1365" y="0" width="1442" height="901" extended-state="6" />
-    <editor active="true" />
+    <frame x="-1" y="0" width="1442" height="901" extended-state="6" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -850,7 +866,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26474822" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2640288" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -921,25 +937,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/JdbcConnect/JdbaQueryDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JdbcConnect/DBUtils.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="18" selection-start-line="23" selection-start-column="18" selection-end-line="23" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JdbcConnect/JdbcTransaction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -995,8 +992,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1064,8 +1061,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1136,8 +1133,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1175,8 +1172,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1214,8 +1211,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1236,8 +1233,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1258,8 +1255,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1297,8 +1294,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1319,8 +1316,8 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
           </folding>
         </state>
       </provider>
@@ -1382,28 +1379,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/JdbcConnect/JdbaQueryDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="20" column="25" selection-start-line="20" selection-start-column="25" selection-end-line="20" selection-end-column="25" />
-          <folding>
-            <marker date="1456470192736" expanded="true" signature="571:616" placeholder="select id, n..person..." />
-            <marker date="1456470192736" expanded="true" signature="571:629" placeholder="select id, n..person..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/JdbcConnect/JdbcDemo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="93" />
-          <folding>
-            <marker date="1454539491627" expanded="true" signature="707:746" placeholder="update perso..." />
-            <marker date="1454539491627" expanded="true" signature="1420:1486" placeholder="insert into person..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/JdbcConnect/db-config.properties">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1420,12 +1395,49 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8/src.zip!/java/sql/PreparedStatement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33242506">
+          <caret line="76" column="21" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JdbcConnect/JdbaQueryDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
+          <folding>
+            <marker date="1477448592591" expanded="true" signature="578:591" placeholder="select id, n..person..." />
+            <marker date="1477448592591" expanded="true" signature="578:630" placeholder="select id, n..person..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/JdbcConnect/TestDBUtils.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.57493186">
+        <state vertical-scroll-proportion="0.0">
           <caret line="22" column="33" selection-start-line="22" selection-start-column="33" selection-end-line="22" selection-end-column="33" />
           <folding>
             <marker date="1457144629100" expanded="true" signature="399:437" placeholder="select * fro..movie_data..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///usr/lib/jvm/jdk1.8/src.zip!/java/sql/Statement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5449591">
+          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/JdbcConnect/JdbcDemo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6321526">
+          <caret line="54" column="32" selection-start-line="54" selection-start-column="32" selection-end-line="54" selection-end-column="32" />
+          <folding>
+            <marker date="1454539491627" expanded="true" signature="707:746" placeholder="update perso..." />
+            <marker date="1454539491627" expanded="true" signature="1420:1486" placeholder="insert into person..." />
           </folding>
         </state>
       </provider>
