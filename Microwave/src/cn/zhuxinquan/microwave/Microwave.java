@@ -6,11 +6,19 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.*;
+import java.util.Timer;
 
 /**
  * Created by zhuxinquan on 2016-11-02.
  */
 public class Microwave extends JFrame{
+
+    TimerTask timerTask = null;
+    java.util.Timer timer = null;
+
+    private String timeText = null;
+    private int time = 0;
 
     JButton startButton = new JButton("电源");
     Label startLabel = new Label("关");
@@ -86,6 +94,9 @@ public class Microwave extends JFrame{
         this.add(hongkao);
         jiedong.setBounds(450, 140, 70, 20);
         this.add(jiedong);
+        pengtiao.setVisible(false);
+        hongkao.setVisible(false);
+        jiedong.setVisible(false);
 
         //时间组合设置
         timeLabel1.setFont(new Font("宋体", 0, 20));
@@ -98,6 +109,11 @@ public class Microwave extends JFrame{
         mantou.setBounds(450, 190, 85, 20);
         zidingyi.setFont(new Font("宋体", 0, 15));
         zidingyi.setBounds(200, 230, 85, 20);
+
+        fancai.setVisible(false);
+        mantou.setVisible(false);
+        niunai.setVisible(false);
+        zidingyi.setVisible(false);
 
         //自定义分钟描述组合
         jSpinner1.setBounds(285, 230, 40, 20);
@@ -112,6 +128,11 @@ public class Microwave extends JFrame{
         this.add(jSpinner2);
         this.add(minutes);
         this.add(seconds);
+
+        jSpinner1.setVisible(false);
+        jSpinner2.setVisible(false);
+        minutes.setVisible(false);
+        seconds.setVisible(false);
 
         this.add(timeLabel1);
         this.add(fancai);
@@ -133,15 +154,19 @@ public class Microwave extends JFrame{
         this.add(start);
         this.add(stop);
 
+        start.setVisible(false);
+        stop.setVisible(false);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
     }
 
     class Start implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
-            if(powerFlag == 0 || !warning.getText().equals("")){
+            if(powerFlag == 0 || !warning.getText().equals("") || startFlag == 1){
                 return ;
             }
+            timeLabel.setBackground(Color.gray);
             startFlag = 1;
             String dangwei = gears.getSelectedCheckbox().getLabel();
             String shijian = times.getSelectedCheckbox().getLabel();
@@ -163,30 +188,45 @@ public class Microwave extends JFrame{
                 min = 1;
                 sec = 0;
             }
-            int time = min * 60 + sec;
-            String hour;
-            String min;
-            String sec;
-            while(startFlag == 1 && time >= 0){
-                hour = String.valueOf(time / 3600);
-                if(hour.length() == 1){
-                    hour = "0" + hour;
+            time = min * 60 + sec;
+
+
+
+            timerTask = new TimerTask() {
+                @Override
+                public void run() {
+                    String hour;
+                    String min;
+                    String sec;
+                    hour = String.valueOf(time / 3600);
+                    if(hour.length() == 1){
+                        hour = "0" + hour;
+                    }
+                    min = String.valueOf(((time - Integer.parseInt(hour) * 3600) / 60));
+                    if(min.length() == 1){
+                        min = "0" + min;
+                    }
+                    sec = String.valueOf(time - Integer.parseInt(hour) * 3600 - Integer.parseInt(min) * 60);
+                    if(sec.length() == 1){
+                        sec = "0" + sec;
+                    }
+                    timeText = hour + ":" + min + ":" + sec;
+                    if(time == 0){
+                        if(powerFlag == 1){
+                            timeLabel.setBackground(Color.RED);
+                        }
+                        startFlag = 0;
+                        timer.cancel();
+                    }
+                    timeLabel.setText(timeText);
+                    time--;
+
                 }
-                min = String.valueOf(((time - Integer.parseInt(hour) * 3600) / 60));
-                if(min.length() == 1){
-                    min = "0" + min;
-                }
-                sec = String.valueOf(time - Integer.parseInt(hour) * 3600 - Integer.parseInt(min) * 60);
-                if(sec.length() == 1){
-                    sec = "0" + sec;
-                }
-                try {
-                    Thread.sleep(1000);
-                } catch (InterruptedException e1) {
-                    e1.printStackTrace();
-                }
-                timeLabel.setText(hour + ":" + min + ":" + sec);
-                time--;
+            };
+//            System.out.println("start: startFlag=" + startFlag + " time=" + time + " min=" + min + " sec=" + sec);
+            if(startFlag == 1 && time > 0){
+                timer = new Timer();
+                timer.schedule(timerTask, 0, 1000);
             }
         }
     }
@@ -194,6 +234,8 @@ public class Microwave extends JFrame{
     class Stop implements ActionListener{
         @Override
         public void actionPerformed(ActionEvent e) {
+            timeLabel.setBackground(Color.gray);
+//            System.out.println("start: startFlag=" + startFlag + " time=" + time + " min=" + min + " sec=" + sec);
             if(powerFlag == 0){
                 return ;
             }
@@ -201,6 +243,7 @@ public class Microwave extends JFrame{
             min = 0;
             sec = 0;
             timeLabel.setText("00:00:00");
+            timer.cancel();
         }
     }
 
@@ -233,10 +276,38 @@ public class Microwave extends JFrame{
         @Override
         public void actionPerformed(ActionEvent e) {
             if(startLabel.getText().equals("开")){
+                pengtiao.setVisible(false);
+                hongkao.setVisible(false);
+                jiedong.setVisible(false);
+                fancai.setVisible(false);
+                mantou.setVisible(false);
+                niunai.setVisible(false);
+                zidingyi.setVisible(false);
+                jSpinner1.setVisible(false);
+                jSpinner2.setVisible(false);
+                minutes.setVisible(false);
+                seconds.setVisible(false);
+                start.setVisible(false);
+                stop.setVisible(false);
                 powerFlag = 0;
                 startLabel.setText("关");
+                timeLabel.setText("00:00:00");
+                time = 0;
                 startLabel.setBackground(Color.gray);
             }else{
+                pengtiao.setVisible(true);
+                hongkao.setVisible(true);
+                jiedong.setVisible(true);
+                fancai.setVisible(true);
+                mantou.setVisible(true);
+                niunai.setVisible(true);
+                zidingyi.setVisible(true);
+                jSpinner1.setVisible(true);
+                jSpinner2.setVisible(true);
+                minutes.setVisible(true);
+                seconds.setVisible(true);
+                start.setVisible(true);
+                stop.setVisible(true);
                 powerFlag = 1;
                 startLabel.setText("开");
                 startLabel.setBackground(Color.CYAN);
