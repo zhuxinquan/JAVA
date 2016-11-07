@@ -6,6 +6,8 @@ import javax.swing.event.ChangeListener;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.event.ItemEvent;
+import java.awt.event.ItemListener;
 import java.util.*;
 import java.util.Timer;
 
@@ -26,9 +28,9 @@ public class Microwave extends JFrame{
     CheckboxGroup gears = new CheckboxGroup();
     Label dangweiLabel = new Label("档位：");
     Label timeLabel1 = new Label("时间：");
-    Checkbox pengtiao = new Checkbox("烹调", gears, true);
-    Checkbox hongkao = new Checkbox("烘烤", gears, false);
-    Checkbox jiedong = new Checkbox("解冻", gears, false);
+    Checkbox pengtiao = new Checkbox("烹调(小)", gears, true);
+    Checkbox hongkao = new Checkbox("烘烤(中)", gears, false);
+    Checkbox jiedong = new Checkbox("解冻(大)", gears, false);
 
     CheckboxGroup times = new CheckboxGroup();
     Checkbox fancai = new Checkbox("饭菜3min", times, true);
@@ -81,6 +83,7 @@ public class Microwave extends JFrame{
         gears.setSelectedCheckbox(pengtiao);
         gears.setSelectedCheckbox(hongkao);
         gears.setSelectedCheckbox(jiedong);
+//        pengtiao.addItemListener(new );
         pengtiao.setFont(new Font("宋体", 0, 15));
         hongkao.setFont(new Font("宋体", 0, 15));
         jiedong.setFont(new Font("宋体", 0, 15));
@@ -88,11 +91,11 @@ public class Microwave extends JFrame{
         dangweiLabel.setBounds(60, 130, 100, 40);
         dangweiLabel.setFont(new Font("宋体", 0, 20));
         this.add(dangweiLabel);
-        pengtiao.setBounds(200, 140, 70, 20);
+        pengtiao.setBounds(200, 140, 80, 20);
         this.add(pengtiao);
-        hongkao.setBounds(330, 140, 70, 20);
+        hongkao.setBounds(330, 140, 80, 20);
         this.add(hongkao);
-        jiedong.setBounds(450, 140, 70, 20);
+        jiedong.setBounds(450, 140, 80, 20);
         this.add(jiedong);
         pengtiao.setVisible(false);
         hongkao.setVisible(false);
@@ -187,6 +190,9 @@ public class Microwave extends JFrame{
             }else if(shijian.equals("馒头1min")){
                 min = 1;
                 sec = 0;
+            }else{
+                sec = (Integer)(jSpinner2.getValue());
+                min = (Integer)(jSpinner1.getValue());
             }
             time = min * 60 + sec;
 
@@ -236,7 +242,7 @@ public class Microwave extends JFrame{
         public void actionPerformed(ActionEvent e) {
             timeLabel.setBackground(Color.gray);
 //            System.out.println("start: startFlag=" + startFlag + " time=" + time + " min=" + min + " sec=" + sec);
-            if(powerFlag == 0){
+            if(startFlag == 0){
                 return ;
             }
             startFlag = 0;
