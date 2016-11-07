@@ -28,6 +28,8 @@ public class Microwave extends JFrame{
     CheckboxGroup gears = new CheckboxGroup();
     Label dangweiLabel = new Label("档位：");
     Label timeLabel1 = new Label("时间：");
+    Button kaimen = new Button("开/关门");
+    Label men = new Label("关");
     Checkbox pengtiao = new Checkbox("烹调(小)", gears, true);
     Checkbox hongkao = new Checkbox("烘烤(中)", gears, false);
     Checkbox jiedong = new Checkbox("解冻(大)", gears, false);
@@ -195,8 +197,6 @@ public class Microwave extends JFrame{
                 min = (Integer)(jSpinner1.getValue());
             }
             time = min * 60 + sec;
-
-
 
             timerTask = new TimerTask() {
                 @Override

@@ -35,7 +35,7 @@ public class MyServer {
 
             String inputLine, outputLine;
             //自定义协议
-            GreetingProtocol greeting = new GreetingProtocol();
+            MyProtocol greeting = new MyProtocol();
             outputLine = greeting.processInput(null);
             //输出操作
             out.println("Welcome to My Chat Server");
